@@ -1,0 +1,38 @@
+{
+  "title": "Rafael Emilio Guzman",
+  "name": "rafael-emilio-guzman",
+  "version": "1.0",
+  "description": "Rafael Emilio Guzman - CV - Resume",
+  "keywords": [
+    "Rafael",
+    "Emilio",
+    "Guzman",
+    "CV",
+    "Resume",
+    "Developer"
+  ],
+  "author": "Rafael Emilio Guzman",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/regf12/rafael-emilio-guzman.git"
+  },
+  "scripts": {
+    "serve": "npx serve static -p 2000"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "devicons": "^1.8.0",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.6",
+    "simple-line-icons": "^2.4.1"
+  },
+  "devDependencies": {
+    "browser-sync": "2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "3.9.0",
+    "gulp-header": "1.8.9",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "3.0.0"
+  }
+}
