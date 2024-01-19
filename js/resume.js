@@ -67,11 +67,15 @@ $(document).ready(function () {
   $('#link-cv').attr('href', `docs/Rafael Guzman Developer (${lang}).pdf`);
   $('#link-cv').attr('download', `Rafael Guzman Developer (${lang}).pdf`);
 
-  fetch(`${window.location.href || '../'}locale/${lang || 'en'}.json`)
-    .then(response => response.json())
-    .then(data => {
-      locale[lang] = data;
+  if (lang === 'es') {
+    fetch(`${window.location.href || '../'}locale/${lang || 'en'}.json`)
+      .then(response => response.json())
+      .then(data => {
+        locale[lang] = data;
 
-      getLang();
-    });
+        getLang();
+      });
+  } else {
+    getLang();
+  }
 });
