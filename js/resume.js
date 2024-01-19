@@ -1,3 +1,11 @@
+let lang = 'en';
+let locale = {
+  es: null,
+  en: null,
+};
+
+/* ------------------------------------------------------------------------ */
+
 (function($) {
   "use strict"; // Start of use strict
 
@@ -26,3 +34,44 @@
   });
 
 })(jQuery); // End of use strict
+
+/* ------------------------------------------------------------------------ */
+
+function getLang() {
+  let elementos = document.querySelectorAll('[data-key]');
+
+  actualizarTextos(locale[lang], elementos);
+}
+
+function actualizarTextos(json, elementos) {
+
+  for (let elemento of elementos) {
+    if (json[elemento.dataset.key]) {
+      elemento.textContent = json[elemento.dataset.key];
+    }
+  }
+}
+
+/* ------------------------------------------------------------------------ */
+
+$(document).ready(function() {
+  try {
+    lang = navigator.language.split('-')[0];
+    if (!['es', 'en'].includes(lang)) {
+      lang = 'en';
+    }
+  } catch (error) {
+    console.log('error: ', error)
+  }
+
+  $('#link-cv').attr('href', `docs/Rafael Guzman Developer (${lang}).pdf`);
+  $('#link-cv').attr('download', `Rafael Guzman Developer (${lang}).pdf`);
+
+  fetch(`../locale/${lang || 'en'}.json`)
+    .then(response => response.json())
+    .then(data => {
+      locale[lang] = data;
+
+      getLang();
+    });
+});

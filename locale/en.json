@@ -1,0 +1,84 @@
+{
+  "locale": "en",
+  "title": "en",
+
+  "home.aboutme": "About me",
+  "home.experience": "Experience",
+  "home.education": "Education",
+  "home.skills": "Skills",
+  "home.portfolio": "Portfolio",
+  "home.downloadcv": "Download CV",
+
+  "home.name": "Rafael Emilio",
+  "home.lastname": "Guzman",
+  "home.title": "Degree in computer science",
+  "home.role": "Full-stack developer",
+  "home.text1": "Software developer with more than 6 years of experience in developing web and mobile applications. With experience in e-commerce, service management and other industries. Passionate about creating quality, wearable products.",
+  "home.text2": "I am always looking for new opportunities to learn and grow; I love working on challenging projects. If you are looking for a talented and committed developer, do not hesitate to contact me.",
+
+  "experience.title": "EXPERIENCE",
+
+  "experience.work1.text1": "I developed systems developed with react and node.",
+  "experience.work1.text2": "Deployed and put into production on AWS, Vercel and Netlify servers.",
+
+  "experience.work2.text1": "I developed software for web and mobile applications.",
+  "experience.work2.text2": "Used technologies like javascript, react.js, react-native, socket.io.",
+
+  "experience.work3.text1": "I developed and maintained web applications for the company and its clients.",
+  "experience.work3.text2": "I used programming technologies such as javascript, vue.js, react.js.",
+
+  "experience.work4.text1": "I developed web applications for the company and its clients.",
+  "experience.work4.text2": "I used programming technologies such as javascript, react.js, php, laravel.",
+  "experience.work4.text3": "Work under scrum methodology",
+
+  "experience.work5.text1": "I designed a large number of e-commerce sites.",
+  "experience.work5.text2": "I was in charge of developing, supporting, managing and deploying e-commerce sites to production.",
+
+  "experience.work6.text1": "Manage servers and repositories on company servers.",
+  "experience.work6.text2": "I provided support and developed modules for the company's commercial system.",
+  "experience.work6.text3": "I used programming technologies such as javascript, php, laravel, socket.io.",
+  
+  "experience.work7.text1": "I developed and maintained web applications.",
+  "experience.work7.text2": "I used programming technologies such as javascript, vue.js.",
+
+  "month.january": "January",
+  "month.february": "February",
+  "month.march": "March",
+  "month.april": "April",
+  "month.may": "May",
+  "month.june": "June",
+  "month.july": "July",
+  "month.august": "August",
+  "month.september": "September",
+  "month.october": "October",
+  "month.november": "November",
+  "month.december": "December",
+
+  "education.title": "EDUCATION",
+  "education.certificate": "Certificate",
+
+  "education.career1.title": "DEGREE IN COMPUTER SCIENCE",
+  "education.career1.university": "UNIVERSITY OF EASTERN VENEZUELA",
+  "education.career1.type": "Computer's science",
+  "education.career1.role": "Web development",
+
+  "education.career2.title": "TUNING THE POSTGRESQL SERVER TO OPTIMIZE PERFORMANCE",
+  "education.career2.university": "UDEMY",
+
+  "education.career3.title": "SOFTWARE TESTING BASICS - QA",
+  "education.career3.university": "UDEMY",
+
+  "skills.title": "SKILLS",
+  "skills.softskills.title": "SOFT SKILLS",
+  "skills.softskills.subtitle": "PROGRAMMING LANGUAGES AND TOOLS",
+  "skills.softskills1": "Teamwork",
+  "skills.softskills2": "Agile development and Scrum",
+  "skills.softskills3": "Good communication, responsibility and commitment",
+  "skills.softskills4": "Creative thinking and positivity",
+  "skills.softskills5": "Time management and adaptability",
+  "skills.softskills6": "Perseverance and patience",
+
+  "portfolio.title": "PORTFOLIO",
+
+  "other.name": "Juan Pérez"
+}

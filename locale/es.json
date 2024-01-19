@@ -1,0 +1,84 @@
+{
+  "locale": "en",
+  "title": "en",
+
+  "home.aboutme": "Acerca de mi",
+  "home.experience": "Experiencia",
+  "home.education": "Educación",
+  "home.skills": "Habilidades",
+  "home.portfolio": "Portfolio",
+  "home.downloadcv": "Descargar CV",
+
+  "home.name": "Rafael Emilio",
+  "home.lastname": "Guzman",
+  "home.title": "Licenciado en Informática",
+  "home.role": "Programador Full-stack",
+  "home.text1": "Desarrollador de software con más de 6 años de experiencia en el desarrollo de aplicaciones web y móviles. Con experiencia en comercio electrónico, administración de servicios y otras industrias. Apasionado por la creación de productos usables y de calidad.",
+  "home.text2": "Siempre estoy buscando nuevas oportunidades para aprender y crecer; me encanta trabajar en proyectos desafiantes. Si estás buscando un desarrollador talentoso y comprometido, no dudes en contactarme.",
+
+  "experience.title": "EXPERIENCIA",
+
+  "experience.work1.text1": "Desarrollé sistemas desarrollados con react y node.",
+  "experience.work1.text2": "Desplegué y realice la puesta en producción en servidores aws, vercel y netlify.",
+
+  "experience.work2.text1": "Desarrollé software para aplicaciones web y móviles.",
+  "experience.work2.text2": "Utilicé tecnologías como javascript, react.js, react-native, socket.io.",
+
+  "experience.work3.text1": "Desarrollé y di mantenimiento a aplicaciones web, de la empresa y sus clientes.",
+  "experience.work3.text2": "Utilicé tecnologías de programación como javascript, vue.js, react.js.",
+
+  "experience.work4.text1": "Desarrollé aplicaciones web, de la empresa y sus clientes.",
+  "experience.work4.text2": "Utilicé tecnologías de programación como javascript, react.js, php, laravel.",
+  "experience.work4.text3": "Trabaje bajo metodología scrum.",
+
+  "experience.work5.text1": "Maqueté una gran cantidad de sitios de comercio electrónico.",
+  "experience.work5.text2": "Me encargué de desarrollar, dar soporte, administrar y desplegar a producción sitios de comercio electrónico.",
+
+  "experience.work6.text1": "Gestione los servidores y repositorios en los servidores de la empresa.",
+  "experience.work6.text2": "Di soporte y desarrollé módulos para el sistema comercial de la empresa.",
+  "experience.work6.text3": "Utilicé tecnologías de programación como javascript, php, laravel, socket.io.",
+  
+  "experience.work7.text1": "Desarrollé y realicé mantenimiento a aplicaciones web.",
+  "experience.work7.text2": "Utilicé tecnologías de programación como javascript, vue.js.",
+
+  "month.january": "Enero",
+  "month.february": "Febrero",
+  "month.march": "Marzo",
+  "month.april": "Abril",
+  "month.may": "Mayo",
+  "month.june": "Junio",
+  "month.july": "Julio",
+  "month.august": "Agosto",
+  "month.september": "Septiembre",
+  "month.october": "Octubre",
+  "month.november": "Noviembre",
+  "month.december": "Diciembre",
+
+  "education.title": "EDUCACIÓN",
+  "education.certificate": "Certificado",
+
+  "education.career1.title": "LICENCIATURA EN INFORMÁTICA",
+  "education.career1.university": "UNIVERSIDAD DE ORIENTE DE VENEZUELA",
+  "education.career1.type": "Ciencias de la Computación",
+  "education.career1.role": "Desarrollo web",
+
+  "education.career2.title": "TUNING DEL SERVIDOR POSTGRESQL PARA OPTIMIZAR EL RENDIMIENTO",
+  "education.career2.university": "UDEMY",
+
+  "education.career3.title": "FUNDAMENTOS DE PRUEBAS DE SOFTWARE - QA",
+  "education.career3.university": "UDEMY",
+
+  "skills.title": "HABILIDADES",
+  "skills.softskills.title": "HABILIDADES BLANDAS",
+  "skills.softskills.subtitle": "LENGUAJES DE PROGRAMACIÓN Y HERRAMIENTAS",
+  "skills.softskills1": "Trabajo en equipo",
+  "skills.softskills2": "Desarrollo ágil y Scrum",
+  "skills.softskills3": "Buena comunicación, responsabilidad y compromiso",
+  "skills.softskills4": "Pensamiento creativo y positivismo",
+  "skills.softskills5": "Gestión del tiempo y adaptabilidad",
+  "skills.softskills6": "Perseverancia y paciencia",
+
+  "portfolio.title": "PORTFOLIO",
+
+  "other.name": "Juan Pérez"
+}
