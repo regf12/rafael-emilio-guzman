@@ -6,11 +6,11 @@ let locale = {
 
 /* ------------------------------------------------------------------------ */
 
-(function($) {
+(function ($) {
   "use strict"; // Start of use strict
 
   // Smooth scrolling using jQuery easing
-  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
+  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -24,7 +24,7 @@ let locale = {
   });
 
   // Closes responsive menu when a scroll trigger link is clicked
-  $('.js-scroll-trigger').click(function() {
+  $('.js-scroll-trigger').click(function () {
     $('.navbar-collapse').collapse('hide');
   });
 
@@ -54,7 +54,7 @@ function actualizarTextos(json, elementos) {
 
 /* ------------------------------------------------------------------------ */
 
-$(document).ready(function() {
+$(document).ready(function () {
   try {
     lang = navigator.language.split('-')[0];
     if (!['es', 'en'].includes(lang)) {
