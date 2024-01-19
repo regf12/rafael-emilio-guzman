@@ -64,10 +64,10 @@ $(document).ready(function () {
     console.log('error: ', error)
   }
 
-  $('#link-cv').attr('href', `docs/Rafael Guzman Developer (${lang}).pdf`);
-  $('#link-cv').attr('download', `Rafael Guzman Developer (${lang}).pdf`);
+  $('#link-cv').attr('href', `docs/Rafael Guzman Developer (${lang || 'en'}).pdf`);
+  $('#link-cv').attr('download', `Rafael Guzman Developer (${lang || 'en'}).pdf`);
 
-  if (lang === 'es') {
+  if (lang && lang === 'es') {
     fetch(`${window.location.href || '../'}locale/${lang || 'en'}.json`)
       .then(response => response.json())
       .then(data => {
