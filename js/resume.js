@@ -67,7 +67,7 @@ $(document).ready(function() {
   $('#link-cv').attr('href', `docs/Rafael Guzman Developer (${lang}).pdf`);
   $('#link-cv').attr('download', `Rafael Guzman Developer (${lang}).pdf`);
 
-  fetch(`../locale/${lang || 'en'}.json`)
+  fetch(`${window.location.href || '../'}locale/${lang || 'en'}.json`)
     .then(response => response.json())
     .then(data => {
       locale[lang] = data;
