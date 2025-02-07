@@ -64,8 +64,9 @@ $(document).ready(function () {
     console.log('error: ', error)
   }
 
-  $('#link-cv').attr('href', `docs/Rafael Guzman Developer (${lang || 'en'}).pdf`);
-  $('#link-cv').attr('download', `Rafael Guzman Developer (${lang || 'en'}).pdf`);
+  let docName = `Rafael Guzman Developer (${lang || 'en'}).pdf`;
+  $('#link-cv').attr('href', `docs/${docName}`);
+  $('#link-cv').attr('download', docName);
 
   if (lang && lang === 'es') {
     fetch(`${window.location.href || '../'}locale/${lang || 'en'}.json`)
