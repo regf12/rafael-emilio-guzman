@@ -1,142 +1,671 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad - My Alet</title>
-    <!-- Metadata para SEO y plataformas de app stores -->
-    <meta name="description" content="Política de Privacidad para la aplicación de conversión de divisas, My Alet, que utiliza las tasas del Banco Central de Venezuela y Binance.">
-    <meta name="keywords" content="política de privacidad, privacidad, app, aplicación, calculadora, conversión, divisas, Venezuela, Binance, BCV, My Alet">
-    <meta name="author" content="Nombre de tu Desarrollador/Compañía">
+    <title>My Alet - Conversor de Divisas para Venezuela | BCV y USDT</title>
+    
+    <!-- Metadata SEO -->
+    <meta name="description" content="La mejor aplicación para consultar la tasa del BCV y USDT en tiempo real. Calculadora integrada, historial de precios y noticias económicas de Venezuela.">
+    <meta name="keywords" content="BCV, Dolar, Venezuela, USDT, Calculadora, Tasa de cambio, Divisas, Finanzas, Economía">
+    <meta name="author" content="My Alet Team">
+    <meta name="theme-color" content="#2563EB">
 
-    <!-- Open Graph Protocol (para redes sociales y verificación) -->
-    <meta property="og:title" content="Política de Privacidad - My Alet">
-    <meta property="og:description" content="La aplicación My Alet respeta tu privacidad. No recopilamos datos personales y solo accedemos a internet para obtener las tasas de cambio de monedas.">
-    <meta property="og:url" content="https://tucalculadora.com/privacidad">
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://regf12.github.io/rafael-emilio-guzman/apps/my-alet/">
+    <meta property="og:title" content="My Alet - Tu Aliado Financiero en Venezuela">
+    <meta property="og:description" content="Consulta tasas oficiales y paralelas al instante. Simple, rápida y precisa.">
+    <meta property="og:image" content="https://regf12.github.io/rafael-emilio-guzman/apps/my-alet/img/screen1.jpg">
 
-    <!-- Twitter Card (para previsualizaciones en Twitter) -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Política de Privacidad - My Alet">
-    <meta name="twitter:description" content="La aplicación My Alet respeta tu privacidad. No recopilamos datos personales y solo accedemos a internet para obtener las tasas de cambio de monedas.">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="My Alet - Conversor de Divisas">
+    <meta property="twitter:description" content="Monitorea el dólar y euro en Venezuela fácilmente.">
+    <meta property="twitter:image" content="https://regf12.github.io/rafael-emilio-guzman/apps/my-alet/img/screen1.jpg">
 
-    <!-- Google Fonts for "Inter" -->
+    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .prose h1, .prose h2, .prose h3 {
-            font-weight: 700;
-        }
-        .prose p {
-            font-weight: 400;
-        }
-        /* Custom dark mode styles for a better look */
-        .dark {
-            background-color: #1a202c;
-            color: #e2e8f0;
-        }
-        .dark .bg-white {
-            background-color: #2d3748;
-        }
-        .dark .text-gray-900 {
-            color: #e2e8f0;
-        }
-        .dark .text-gray-600 {
-            color: #cbd5e0;
-        }
+/* 
+ * My Alet - Promotional Landing Page Styles
+ * Optimized for performance and premium aesthetics.
+ */
+
+:root {
+    /* Color Palette - Light Mode (Default) */
+    --primary-color: #2f95dc;
+    /* App Tint */
+    --primary-hover: #2076b3;
+    /* Darker Tint */
+    --secondary-color: #4CAF50;
+    /* Dollar Green */
+    --bg-color: #F8FAFC;
+    /* Slate 50 */
+    --surface-color: #FFFFFF;
+    --text-primary: #1E293B;
+    /* Slate 800 */
+    --text-secondary: #64748B;
+    /* Slate 500 */
+    --border-color: #E2E8F0;
+    /* Slate 200 */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --radius: 1rem;
+    --transition: 0.3s ease;
+}
+
+/* Dark Mode Variables */
+[data-theme="dark"] {
+    --primary-color: #5aa9e6;
+    /* Lighter Tint for Dark Mode */
+    --primary-hover: #2f95dc;
+    --bg-color: #000000;
+    /* App Background */
+    --surface-color: #121212;
+    /* Dark Surface */
+    --text-primary: #F1F5F9;
+    /* Slate 100 */
+    --text-secondary: #94A3B8;
+    /* Slate 400 */
+    --border-color: #333333;
+    /* Slate 700 */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3);
+}
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    transition: background-color var(--transition), color var(--transition);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Utilities */
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.section-padding {
+    padding: 5rem 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Header */
+header {
+    background-color: rgba(var(--surface-color), 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    border-bottom: 1px solid var(--border-color);
+    transition: border-color var(--transition), background-color var(--transition);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.5rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.logo img {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 0.5rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    transition: all var(--transition);
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-secondary);
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color var(--transition);
+}
+
+.theme-toggle:hover {
+    background-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+/* Hero Section */
+.hero {
+    padding: 6rem 0 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 1.5rem auto 2.5rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    letter-spacing: -0.025em;
+}
+
+.hero-visual {
+    margin-top: 4rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.phone-mockup {
+    background-color: #111;
+    border-radius: 3rem;
+    padding: 1rem;
+    width: 300px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border: 8px solid #333;
+    transform: rotateY(-5deg) rotateX(5deg);
+    transition: transform 0.5s ease;
+    animation: float 6s ease-in-out infinite;
+}
+
+.phone-mockup:hover {
+    transform: rotateY(0) rotateX(0);
+}
+
+.phone-mockup img {
+    border-radius: 2rem;
+    width: 100%;
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.feature-icon {
+    height: 3rem;
+    width: 3rem;
+    background-color: rgba(37, 99, 235, 0.1);
+    color: var(--primary-color);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+}
+
+/* Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 3rem 0;
+}
+
+.gallery-item {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition);
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+}
+
+/* Footer */
+footer {
+    background-color: var(--surface-color);
+    border-top: 1px solid var(--border-color);
+    padding: 3rem 0;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    margin-left: 1.5rem;
+    font-size: 0.875rem;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotateY(-5deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotateY(-5deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotateY(-5deg);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.25rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hidden-mobile {
+        display: none !important;
+    }
+
+    .navbar {
+        height: 3.5rem;
+        /* Compact header */
+    }
+
+    .logo img {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .logo span {
+        font-size: 1.1rem;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--text-primary);
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-menu-btn {
+        display: none;
+    }
+}
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900 dark:bg-gray-800 dark:text-gray-100 min-h-screen flex flex-col items-center">
+<body>
 
-    <!-- Header with dark mode toggle -->
-    <header class="w-full bg-white dark:bg-gray-700 shadow-md p-4 sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-gray-900 dark:text-gray-100">Política de Privacidad</h1>
-            <button id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400">
-                <svg id="sun-icon" class="h-6 w-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM5.38 5.38a.75.75 0 011.06 0L10 8.56l3.56-3.56a.75.75 0 011.06 1.06L11.06 9.62l3.56 3.56a.75.75 0 01-1.06 1.06L10 10.44l-3.56 3.56a.75.75 0 01-1.06-1.06L8.94 9.62l-3.56-3.56a.75.75 0 010-1.06z"></path>
-                </svg>
-                <svg id="moon-icon" class="hidden h-6 w-6 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-                </svg>
-            </button>
+    <!-- Header -->
+    <header>
+        <div class="container navbar">
+            <a href="#" class="logo">
+                <img src="img/logo.png" alt="My Alet Logo">
+                <span>My Alet</span>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#inicio" class="nav-link">Inicio</a>
+                <a href="#funciones" class="nav-link">Funciones</a>
+                <a href="#galeria" class="nav-link">Galería</a>
+                <a href="privacy-policy.html" class="nav-link">Privacidad</a>
+            </nav>
+
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+                    <!-- Sun Icon -->
+                    <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <!-- Moon Icon -->
+                    <svg id="moon-icon" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+                <a href="https://play.google.com/store/apps/details?id=com.regf12.myalet" target="_blank" class="btn btn-primary hidden-mobile">Descargar App</a>
+            </div>
         </div>
     </header>
 
-    <!-- Main content container for the policy text -->
-    <main class="container mx-auto p-6 md:p-12 prose max-w-none prose-lg text-gray-800 dark:text-gray-200">
-        <div class="bg-white dark:bg-gray-700 rounded-2xl shadow-xl p-8 md:p-12 mt-8">
-            <h2 class="text-3xl font-bold mb-6 text-center text-blue-600 dark:text-blue-400">Política de Privacidad</h2>
-            <p>La presente política de privacidad describe cómo se maneja la información del usuario en la aplicación **My Alet**. Entendemos la importancia de tu privacidad y estamos comprometidos a protegerla.</p>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero fade-in">
+        <div class="container">
+            <h1 class="text-gradient">El control de tus divisas<br>en tu bolsillo.</h1>
+            <p>Consulta la tasa oficial del BCV y monitores en tiempo real. Realiza conversiones precisas al instante con My Alet.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center;">
+                <a href="https://play.google.com/store/apps/details?id=com.regf12.myalet" target="_blank" class="btn btn-primary">Descargar Ahora</a>
+                <a href="#funciones" class="btn" style="background: var(--surface-color); border: 1px solid var(--border-color);">Ver más</a>
+            </div>
 
-            <h3 class="text-2xl font-semibold mt-8 mb-4">1. Recopilación de Información</h3>
-            <p>Nuestra aplicación ha sido diseñada para ser lo más privada posible. <strong>No recopilamos ni almacenamos ningún tipo de información personal</strong> de nuestros usuarios. Esto incluye, pero no se limita a, nombres, direcciones de correo electrónico, números de teléfono, datos de ubicación, o cualquier otro tipo de dato que pueda identificarte. Tampoco solicitamos acceso a tu cámara, micrófono, galería de fotos o archivos almacenados en tu dispositivo.</p>
-            <p>La aplicación no utiliza cookies ni tecnologías de seguimiento para monitorear tu actividad. Todos los cálculos y conversiones se realizan dentro de la aplicación sin necesidad de enviar información sobre tus interacciones a nuestros servidores.</p>
-            
-            <h3 class="text-2xl font-semibold mt-8 mb-4">2. Acceso a Internet</h3>
-            <p>La única función de la aplicación que requiere una conexión a internet es la consulta de las tasas de cambio de monedas. Para proporcionarte valores precisos y actualizados, la aplicación se conecta a las siguientes fuentes de datos públicas:</p>
-            <ul class="list-disc list-inside space-y-2">
-                <li>El Banco Central de Venezuela para obtener la tasa oficial.</li>
-                <li>La plataforma de Binance para obtener el valor del mercado.</li>
-            </ul>
-            <p>Estas peticiones de datos son anónimas y no contienen información personal del usuario. La aplicación se limita a solicitar la tasa de cambio y no comparte ningún dato sobre el usuario con estas fuentes externas.</p>
-
-            <h3 class="text-2xl font-semibold mt-8 mb-4">3. Seguridad de los Datos</h3>
-            <p>Dado que no recopilamos ni almacenamos información personal, no hay datos personales del usuario que puedan ser comprometidos. La seguridad de tu información está garantizada por el propio diseño de la aplicación, que se enfoca en la privacidad desde el inicio.</p>
-
-            <h3 class="text-2xl font-semibold mt-8 mb-4">4. Cambios en la Política de Privacidad</h3>
-            <p>Podemos actualizar nuestra política de privacidad de vez en cuando. Te notificaremos de cualquier cambio publicando la nueva política de privacidad en esta misma página. Se te recomienda revisar esta política periódicamente para estar al tanto de cualquier modificación.</p>
-
-            <h3 class="text-2xl font-semibold mt-8 mb-4">5. Contacto</h3>
-            <p>Si tienes alguna pregunta o sugerencia sobre nuestra Política de Privacidad, no dudes en contactarnos en la siguiente dirección de correo electrónico:</p>
-            <p class="font-bold text-center text-blue-600 dark:text-blue-400">soporte@myalet.com</p>
-
-            <p class="mt-8 text-center text-sm text-gray-500 dark:text-gray-400">Última actualización: 23 de septiembre de 2025</p>
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <img src="img/screen1.jpg" alt="Captura de pantalla de My Alet">
+                </div>
+            </div>
         </div>
-    </main>
-    
-    <!-- JavaScript for the dark mode toggle -->
+    </section>
+
+    <!-- Features Section -->
+    <section id="funciones" class="section-padding fade-in">
+        <div class="container">
+            <div class="text-center mb-12">
+                <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">Todo lo que necesitas</h2>
+                <p style="color: var(--text-secondary); max-width: 500px; margin: 0 auto;">Diseñada para brindarte la información más precisa y rápida del mercado venezolano.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <h3>Tasas en Tiempo Real</h3>
+                    <p>Actualización constante de la tasa oficial del Banco Central de Venezuela y promedio de monitores.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2" transform="rotate(180 12 12)"/><line x1="12" y1="18" x2="12" y2="18.01"/><line x1="8" y1="18" x2="8" y2="18.01"/><line x1="16" y1="18" x2="16" y2="18.01"/><line x1="12" y1="14" x2="12" y2="14.01"/><line x1="8" y1="14" x2="8" y2="14.01"/><line x1="16" y1="14" x2="16" y2="14.01"/><path d="M16 10H8"/></svg>
+                    </div>
+                    <h3>Calculadora Integrada</h3>
+                    <p>Convierte entre Bolívares, Dólares y Euros rápidamente sin salir de la aplicación.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
+                    <h3>Historial de Precios</h3>
+                    <p>Consulta el histórico de tasas y su variación para tomar las mejores decisiones financieras.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeria" class="section-padding fade-in" style="background-color: rgba(37, 99, 235, 0.03);">
+        <div class="container">
+            <div class="text-center mb-12">
+                <h2 style="font-size: 2.5rem; font-weight: 700;">Galería</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="img/screen2.jpg" alt="Pantalla de Historia" loading="lazy"></div>
+                <div class="gallery-item"><img src="img/screen3.jpg" alt="Pantalla de Calculadora" loading="lazy"></div>
+                <div class="gallery-item"><img src="img/screen4.jpg" alt="Pantalla de Configuración" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section id="descargar" class="section-padding text-center fade-in">
+        <div class="container">
+            <div style="background: var(--surface-color); padding: 4rem 2rem; border-radius: 2rem; border: 1px solid var(--border-color); box-shadow: var(--shadow-xl);">
+                <h2 class="text-gradient" style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem;">Descarga My Alet hoy</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.125rem;">Disponible para dispositivos Android. Mantente al día con la economía.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.regf12.myalet" target="_blank" class="btn btn-primary" style="font-size: 1.25rem; padding: 1rem 2.5rem; text-decoration: none; display: inline-flex;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" style="margin-right: 0.5rem;"><path d="M3 3v18h18V3H3zm13.79 13.91l-4.22-5.46-2.5 3.33-4.57-6.09 11.29 8.22z"/></svg>
+                    Descargar en Google Play
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content px-6">
+            <div class="footer-brand">
+                <div class="logo">
+                    <img src="img/logo.png" alt="Logo">
+                    <span>My Alet</span>
+                </div>
+                <p style="color: var(--text-secondary); margin-top: 1rem; max-width: 300px;">
+                    Simplificando las finanzas diarias en Venezuela con datos precisos y confiables.
+                </p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Términos</a>
+                <a href="privacy-policy.html">Política de Privacidad</a>
+                <a href="mailto:regf.12@gmail.com">Contacto</a>
+            </div>
+        </div>
+        <div class="text-center" style="margin-top: 3rem; color: var(--text-secondary); font-size: 0.875rem;">
+            &copy; 2025 My Alet. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- Scripts -->
     <script>
-        // Get references to the button and icons
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const sunIcon = document.getElementById('sun-icon');
-        const moonIcon = document.getElementById('moon-icon');
-        const htmlElement = document.documentElement;
+/* My Alet Landing Page Interactivity */
 
-        // Check for theme in local storage or system preference on page load
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            htmlElement.classList.add('dark');
-            sunIcon.classList.add('hidden');
-            moonIcon.classList.remove('hidden');
-        } else {
-            htmlElement.classList.remove('dark');
-            sunIcon.classList.remove('hidden');
-            moonIcon.classList.add('hidden');
-        }
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- Dark Mode Toggle ---
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+    const sunIcon = document.getElementById('sun-icon');
+    const moonIcon = document.getElementById('moon-icon');
 
-        // Add event listener to the button
+    // Check preference
+    const savedTheme = localStorage.getItem('theme');
+    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
+        enableDark();
+    } else {
+        enableLight();
+    }
+
+    function enableDark() {
+        htmlElement.setAttribute('data-theme', 'dark');
+        htmlElement.classList.add('dark');
+        if(sunIcon) sunIcon.style.display = 'none';
+        if(moonIcon) moonIcon.style.display = 'block';
+        localStorage.setItem('theme', 'dark');
+    }
+
+    function enableLight() {
+        htmlElement.setAttribute('data-theme', 'light');
+        htmlElement.classList.remove('dark');
+        if(sunIcon) sunIcon.style.display = 'block';
+        if(moonIcon) moonIcon.style.display = 'none';
+        localStorage.setItem('theme', 'light');
+    }
+
+    if (themeToggleBtn) {
         themeToggleBtn.addEventListener('click', () => {
-            // Toggle the 'dark' class on the html element
-            if (htmlElement.classList.contains('dark')) {
-                htmlElement.classList.remove('dark');
-                localStorage.theme = 'light';
-                sunIcon.classList.remove('hidden');
-                moonIcon.classList.add('hidden');
+            if (htmlElement.getAttribute('data-theme') === 'dark') {
+                enableLight();
             } else {
-                htmlElement.classList.add('dark');
-                localStorage.theme = 'dark';
-                sunIcon.classList.add('hidden');
-                moonIcon.classList.remove('hidden');
+                enableDark();
             }
         });
-    </script>
+    }
 
+    // --- Scroll Animations ---
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Only animate once
+            }
+        });
+    }, observerOptions);
+
+    const fadeElements = document.querySelectorAll('.fade-in');
+    fadeElements.forEach(el => observer.observe(el));
+
+
+    // --- Mobile Menu (Simple Toggle) ---
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', () => {
+            // Basic toggle for demonstration; CSS would need to handle 'show' class overlay
+            // For this single-file/optimized version we'll just alert or simple expand if I added styles
+            // But since I hid nav-links in CSS for mobile, I should add a logic to show it.
+            // Let's add inline style for simplicity or assume future CSS expansion.
+            const isFlex = navLinks.style.display === 'flex';
+            
+            if (isFlex) {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.background = 'var(--surface-color)';
+                navLinks.style.padding = '1rem';
+                navLinks.style.boxShadow = 'var(--shadow-md)';
+            }
+        });
+    }
+});
+    </script>
 </body>
 </html>
