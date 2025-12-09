@@ -441,7 +441,7 @@ footer {
     <!-- Header -->
     <header>
         <div class="container navbar">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <img src="img/logo.png" alt="My Alet Logo">
                 <span>My Alet</span>
             </a>
@@ -561,7 +561,7 @@ footer {
                 </p>
             </div>
             <div class="footer-links">
-                <a href="#">Términos</a>
+                <a href="terms-and-conditions.html">Términos</a>
                 <a href="privacy-policy.html">Política de Privacidad</a>
                 <a href="mailto:regf.12@gmail.com">Contacto</a>
             </div>
@@ -638,16 +638,12 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeElements.forEach(el => observer.observe(el));
 
 
-    // --- Mobile Menu (Simple Toggle) ---
+    // --- Mobile Menu ---
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
 
     if (mobileMenuBtn) {
         mobileMenuBtn.addEventListener('click', () => {
-            // Basic toggle for demonstration; CSS would need to handle 'show' class overlay
-            // For this single-file/optimized version we'll just alert or simple expand if I added styles
-            // But since I hid nav-links in CSS for mobile, I should add a logic to show it.
-            // Let's add inline style for simplicity or assume future CSS expansion.
             const isFlex = navLinks.style.display === 'flex';
             
             if (isFlex) {
