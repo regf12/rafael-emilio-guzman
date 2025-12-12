@@ -1,4 +1,4 @@
-# ![Profile Image](https://res.cloudinary.com/regf/image/upload/v1706219364/personal/image1.png) Hola, mi nombre es Rafael Emilio Guzman 👋
+# ![Profile Image](https://res.cloudinary.com/regf/image/upload/v1706219364/personal/image1.png) Hello, my name is Rafael Emilio Guzman 👋
 
 ### Degree in Computer Science | Full-stack Web & Android Developer
 
