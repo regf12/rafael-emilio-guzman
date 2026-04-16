@@ -84,6 +84,7 @@
   "education.career3.university": "UDEMY",
 
   "skills.title": "HABILIDADES",
+  "skills.tools.title": "HERRAMIENTAS",
   "skills.subtitle": "LENGUAJES DE PROGRAMACIÓN Y HERRAMIENTAS",
   "skills.softskills.title": "HABILIDADES BLANDAS",
   "skills.softskills1": "Trabajo en equipo",
@@ -93,6 +94,42 @@
   "skills.softskills5": "Gestión del tiempo y adaptabilidad",
   "skills.softskills6": "Perseverancia y paciencia",
 
-  "portfolio.title": "PORTAFOLIO"
+  "portfolio.title": "PORTAFOLIO",
+
+  "portfolio.mobile.title": "DESARROLLO MÓVIL",
+  "portfolio.mobile.description": "Apps multiplataformas publicadas en tiendas para logística y servicios (React Native / Flutter).",
+  "portfolio.mobile.button": "Ver Perfil",
+
+  "portfolio.telegram.title": "Telegram Bot",
+  "portfolio.telegram.description": "Bot de Telegram diseñado para gestionar y organizar los contactos recibidos desde mi portafolio. Permite capturar leads y administrarlos de forma sencilla.",
+  "portfolio.telegram.button": "Ver Proyecto",
+
+  "portfolio.nearby.title": "NEARBY CRM",
+  "portfolio.nearby.description": "Solución inmobiliaria integral con panel administrativo y gestión de leads. Desarrollado con Angular y Laravel.",
+  "portfolio.nearby.button": "Ver Proyecto",
+
+  "portfolio.ironmaiden.title": "IRON MAIDEN (GAME)",
+  "portfolio.ironmaiden.description": "Videojuego web temático de Iron Maiden. Desarrollado con tecnologías modernas para una experiencia interactiva única.",
+  "portfolio.ironmaiden.button": "Ver Proyecto",
+
+  "portfolio.megashopty.title": "MEGASHOPTY",
+  "portfolio.megashopty.description": "Frontend para e-commerce con catálogo de productos y carrito de compras. Optimizado para conversiones.",
+  "portfolio.megashopty.button": "Ver Proyecto",
+
+  "portfolio.foodmash.title": "FOOD MASH",
+  "portfolio.foodmash.description": "Dashboard para gestión de pedidos y menús en restaurantes. Visualización de datos y control de inventario.",
+  "portfolio.foodmash.button": "Ver Proyecto",
+
+  "portfolio.growfit.title": "GROWFIT",
+  "portfolio.growfit.description": "Landing page para servicio de fitness y bienestar. Diseño atractivo con llamadas a la acción efectivas.",
+  "portfolio.growfit.button": "Ver Proyecto",
+
+  "portfolio.playpen.title": "PLAYPEN",
+  "portfolio.playpen.description": "Plataforma de entretenimiento y juegos. Experiencia inmersiva para usuarios de todas las edades.",
+  "portfolio.playpen.button": "Ver Proyecto",
+
+  "portfolio.playntrade.title": "PLAY N TRADE",
+  "portfolio.playntrade.description": "Sitio web para compra y venta de videojuegos y consolas. Catálogo dinámico y pasarela de pagos.",
+  "portfolio.playntrade.button": "Ver Proyecto"
 
 }

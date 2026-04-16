@@ -52,12 +52,51 @@
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap"
     rel="stylesheet" />
-  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom fonts and styles - Non-critical deferred loading -->
+  <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+  </noscript>
 
-  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <!-- AOS (Animate On Scroll) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <!-- Custom styles for this template -->
   <link href="css/resume.min.css" rel="stylesheet" />
+
+  <style>
+    .skill-icon {
+      height: 3.5rem;
+      width: auto;
+      margin: 10px;
+      transition: transform 0.3s ease;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    }
+    .skill-icon:hover {
+      transform: translateY(-5px) scale(1.1);
+    }
+    @media (max-width: 576px) {
+      .skill-icon {
+        height: 2.5rem;
+      }
+    }
+    .project-card {
+      transition: all 0.3s ease;
+      cursor: normal;
+    }
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+    }
+    .project-card .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      background-color: #eaecf0; /* Color de respaldo */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
 </head>
 
 <body id="page-top">
@@ -79,19 +118,16 @@
           <a class="nav-link js-scroll-trigger" href="#about" data-key="home.aboutme">About me</a>
         </li>
         <li class="nav-item my-1 my-md-0">
+          <a class="nav-link js-scroll-trigger" href="#skills" data-key="home.skills">Skills</a>
+        </li>
+        <li class="nav-item my-1 my-md-0">
+          <a class="nav-link js-scroll-trigger" href="#awards" data-key="home.portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item my-1 my-md-0">
           <a class="nav-link js-scroll-trigger" href="#experience" data-key="home.experience">Experience</a>
         </li>
         <li class="nav-item my-1 my-md-0">
           <a class="nav-link js-scroll-trigger" href="#education" data-key="home.education">Education</a>
-        </li>
-        <li class="nav-item my-1 my-md-0">
-          <a class="nav-link js-scroll-trigger" href="#skills" data-key="home.skills">Skills</a>
-        </li>
-        <!-- <li class="nav-item my-1 my-md-0">
-          <a class="nav-link js-scroll-trigger" href="#interests">Intereses</a>
-        </li> -->
-        <li class="nav-item my-1 my-md-0">
-          <a class="nav-link js-scroll-trigger" href="#awards" data-key="home.portfolio">Portfolio</a>
         </li>
         <li class="nav-item my-1 my-md-0">
           <a id="link-cv" class="nav-link js-scroll-trigger" href="docs/Rafael Guzman Developer (es).pdf"
@@ -105,10 +141,11 @@
 
   <!-- body -->
   <div class="container-fluid p-0">
+
     <!-- Acerca de mi -->
-    <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+    <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about" data-aos="fade-in">
       <div class="my-auto">
-        <h1 class="mb-0 lang">
+        <h1 class="mb-0 lang" data-aos="fade-right">
           <span data-key="home.name">Rafael Emilio</span>
           <span class="text-primary">Guzman</span>
         </h1>
@@ -159,14 +196,14 @@
               </span>
             </a>
           </li>
-          <li class="list-inline-item" title="Contact by skype">
+          <!-- <li class="list-inline-item" title="Contact by skype">
             <a href="skype:rafael_emilio_12" target="_blank" rel="noopener noreferrer">
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-skype fa-stack-1x fa-inverse"></i>
               </span>
             </a>
-          </li>
+          </li> -->
           <!-- <li class="list-inline-item" title="Contact by instagram">
             <a href="https://www.instagram.com/regf_12" target="_blank" rel="noopener noreferrer">
               <span class="fa-stack fa-lg">
@@ -191,6 +228,14 @@
               </span>
             </a>
           </li>
+          <li class="list-inline-item" title="Contact by workana">
+            <a href="https://www.workana.com/freelancer/0be0b6836eb7ace0f5545adc26229f65" target="_blank"rel="noopener noreferrer">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-briefcase fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
           <li class="list-inline-item" title="Contact by github">
             <a href="https://github.com/regf12" target="_blank" rel="noopener noreferrer">
               <span class="fa-stack fa-lg">
@@ -211,10 +256,361 @@
       </div>
     </section>
 
-    <!-- Experiencia -->
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+    <!-- Habilidades -->
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills" data-aos="fade-up">
       <div class="my-auto">
-        <h2 class="mb-5" data-key="experience.title">EXPERIENCE</h2>
+        <h2 class="mb-5" data-key="skills.title" data-aos="fade-right">SKILLS</h2>
+
+        <div class="subheading mb-3" data-key="skills.subtitle">PROGRAMMING LANGUAGES AND TOOLS</div>
+
+        <!-- tecnologias -->
+        <div class="list-inline list-icons">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Html5" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" class="skill-icon" alt="Html5" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Css3" data-aos="zoom-in" data-aos-delay="50">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" class="skill-icon" alt="Css3" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Javascript" data-aos="zoom-in" data-aos-delay="100">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" class="skill-icon" alt="Javascript" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Typescript" data-aos="zoom-in" data-aos-delay="150">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" class="skill-icon" alt="Typescript" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Php" data-aos="zoom-in" data-aos-delay="200">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" class="skill-icon" alt="Php" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Node.js" data-aos="zoom-in" data-aos-delay="250">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" class="skill-icon" alt="Node.js" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Jquery" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg" class="skill-icon" alt="Jquery" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Sass" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" class="skill-icon" alt="Sass" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Less" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/less/less-plain-wordmark.svg" class="skill-icon" alt="Less" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Bootstrap" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" class="skill-icon" alt="Bootstrap" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Bulma" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bulma/bulma-plain.svg" class="skill-icon" alt="Bulma" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Vuetify" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuetify/vuetify-original.svg" class="skill-icon" alt="Vuetify" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Npm" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg" class="skill-icon" alt="Npm" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="React.js" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" class="skill-icon" alt="React.js" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="React Native" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" class="skill-icon" alt="React Native" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Expo" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/expo/expo-original.svg" class="skill-icon" alt="Expo" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Angular.js" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg" class="skill-icon" alt="Angular.js" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Redux" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg" class="skill-icon" alt="Redux" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Vue.js" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" class="skill-icon" alt="Vue.js" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Nuxt.js" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nuxtjs/nuxtjs-original.svg" class="skill-icon" alt="Nuxt.js" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Material.ui" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg" class="skill-icon" alt="Material UI" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Apache" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apache/apache-original.svg" class="skill-icon" alt="Apache" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Babel" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/babel/babel-original.svg" class="skill-icon" alt="Babel" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Dart" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" class="skill-icon" alt="Dart" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Express" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" class="skill-icon" alt="Express" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Flutter" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" class="skill-icon" alt="Flutter" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="iOS" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apple/apple-original.svg" class="skill-icon" alt="iOS" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Android" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" class="skill-icon" alt="Android" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Socket.io" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/socketio/socketio-original.svg" class="skill-icon" alt="Socket.io" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Gradle" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original.svg" class="skill-icon" alt="Gradle" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Kotlin" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg" class="skill-icon" alt="Kotlin" />
+          </li>
+
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Laravel" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" class="skill-icon" alt="Laravel" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Markdown" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/markdown/markdown-original.svg" class="skill-icon" alt="Markdown" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Mongodb" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" class="skill-icon" alt="Mongodb" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Mysql" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" class="skill-icon" alt="Mysql" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Postgresql" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" class="skill-icon" alt="Postgresql" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Next.js" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" class="skill-icon" alt="Next.js" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Nginx" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg" class="skill-icon" alt="Nginx" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Webpack" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/webpack/webpack-original.svg" class="skill-icon" alt="Webpack" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Composer" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/composer/composer-original.svg" class="skill-icon" alt="Composer" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Vite" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vite/vite-original.svg" class="skill-icon" alt="Vite" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="AWS" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" class="skill-icon" alt="AWS" />
+          </li>
+        </div>
+
+        <hr class="w-100 my-4" />
+
+        <!-- herramientas -->
+        <div class="subheading mb-3" data-key="skills.tools.title">TOOLS</div>
+        <div class="list-inline list-icons">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Git" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" class="skill-icon" alt="Git" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Trello" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-plain.svg" class="skill-icon" alt="Trello" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Jira" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" class="skill-icon" alt="Jira" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Slack" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/slack/slack-original.svg" class="skill-icon" alt="Slack" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Gimp" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gimp/gimp-original.svg" class="skill-icon" alt="Gimp" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Inkscape" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/inkscape/inkscape-original.svg" class="skill-icon" alt="Inkscape" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Illustrator" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-plain.svg" class="skill-icon" alt="Illustrator" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Xd" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/xd/xd-plain.svg" class="skill-icon" alt="Xd" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Photoshop" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-plain.svg" class="skill-icon" alt="Photoshop" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Codepen" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/codepen/codepen-original.svg" class="skill-icon" alt="Codepen" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Vim" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vim/vim-original.svg" class="skill-icon" alt="Vim" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Atom" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/atom/atom-original.svg" class="skill-icon" alt="Atom" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Vs code" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" class="skill-icon" alt="Vs code" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Android studio" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" class="skill-icon" alt="Android studio" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Xcode" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/xcode/xcode-original.svg" class="skill-icon" alt="Xcode" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Bash" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" class="skill-icon" alt="Bash" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Ssh" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/putty/putty-original.svg" class="skill-icon" alt="Ssh" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Docker" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" class="skill-icon" alt="Docker" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Filezilla" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/filezilla/filezilla-original.svg" class="skill-icon" alt="Filezilla" />
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Unity" data-aos="zoom-in">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg" class="skill-icon" alt="Unity" />
+          </li>
+        </div>
+
+        <hr class="w-100 my-4" />
+
+        <div class="subheading mb-3" data-key="skills.softskills.title">SOFT SKILLS</div>
+        <ul class="fa-ul mb-0">
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            <span data-key="skills.softskills1">Teamwork</span>
+          </li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            <span data-key="skills.softskills2">Agile development and Scrum</span>
+          </li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            <span data-key="skills.softskills3">Good communication, responsibility and commitment</span>
+          </li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            <span data-key="skills.softskills4">Creative thinking and positivity</span>
+          </li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            <span data-key="skills.softskills5">Time management and adaptability</span>
+          </li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            <span data-key="skills.softskills6">Perseverance and patience</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Visual Portfolio -->
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards" data-aos="fade-up">
+      <div class="my-auto">
+        <h2 class="mb-5" data-key="home.portfolio" data-aos="fade-right">PORTFOLIO</h2>
+        <div class="row">
+          <!-- Mobile Apps -->
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="card h-100 shadow-sm border-0 project-card bg-light">
+              <img src="img/project-mobile.png" class="card-img-top" alt="Mobile Development">
+              <div class="card-body">
+                <h5 class="card-title font-weight-bold" data-key="portfolio.mobile.title">DESARROLLO MÓVIL</h5>
+                <p class="card-text small text-secondary" data-key="portfolio.mobile.description">Apps multiplataformas publicadas en tiendas para logística y servicios (React Native / Flutter).</p>
+                <div class="mt-3">
+                  <a href="https://play.google.com/store/apps/developer?id=Regf12" class="btn btn-primary btn-sm rounded-pill px-3" target="_blank" data-key="portfolio.mobile.button">Ver Perfil</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Telegram Bot -->
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card h-100 shadow-sm border-0 project-card bg-light">
+              <img src="img/project-bot.png" class="card-img-top" alt="Telegram Bot">
+              <div class="card-body">
+                <h5 class="card-title font-weight-bold" data-key="portfolio.telegram.title">Telegram Bot</h5>
+                <p class="card-text small text-secondary" data-key="portfolio.telegram.description">Bot de Telegram diseñado para gestionar y organizar los contactos recibidos desde mi portafolio. Permite capturar leads y administrarlos de forma sencilla.</p>
+                <div class="mt-3">
+                  <a href="https://t.me/RegfBot" class="btn btn-primary btn-sm rounded-pill px-3" target="_blank" data-key="portfolio.telegram.button">Ver Proyecto</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Iron Maiden -->
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="400">
+            <div class="card h-100 shadow-sm border-0 project-card bg-light">
+              <img src="img/project-game.png" class="card-img-top" alt="Iron Maiden game">
+              <div class="card-body">
+                <h5 class="card-title font-weight-bold" data-key="portfolio.ironmaiden.title">IRON MAIDEN (GAME)</h5>
+                <p class="card-text small text-secondary" data-key="portfolio.ironmaiden.description">Videojuego web temático de Iron Maiden. Desarrollado con tecnologías modernas para una experiencia interactiva única.</p>
+                <div class="mt-3">
+                  <a href="https://iron-maiden-p-c-game.netlify.app/" class="btn btn-primary btn-sm rounded-pill px-3" target="_blank" rel="noopener noreferrer" data-key="portfolio.ironmaiden.button">Ver Proyecto</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Megashopty -->
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="500">
+            <div class="card h-100 shadow-sm border-0 project-card bg-light">
+              <img src="img/project-megashopty.png" class="card-img-top" alt="Megashopty">
+              <div class="card-body">
+                <h5 class="card-title font-weight-bold" data-key="portfolio.megashopty.title">MEGASHOPTY</h5>
+                <p class="card-text small text-secondary" data-key="portfolio.megashopty.description">Frontend para e-commerce con catálogo de productos y carrito de compras. Optimizado para conversiones.</p>
+                <div class="mt-3">
+                  <a href="https://frontest.megashopty.com/" class="btn btn-primary btn-sm rounded-pill px-3" target="_blank" rel="noopener noreferrer" data-key="portfolio.megashopty.button">Ver Proyecto</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Food Mash -->
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="550">
+            <div class="card h-100 shadow-sm border-0 project-card bg-light">
+              <img src="img/project-foodmash.png" class="card-img-top" alt="Food mash">
+              <div class="card-body">
+                <h5 class="card-title font-weight-bold" data-key="portfolio.foodmash.title">FOOD MASH</h5>
+                <p class="card-text small text-secondary" data-key="portfolio.foodmash.description">Dashboard para gestión de pedidos y menús en restaurantes. Visualización de datos y control de inventario.</p>
+                <div class="mt-3">
+                  <a href="https://dashboard-food-mash.netlify.app/" class="btn btn-primary btn-sm rounded-pill px-3" target="_blank" rel="noopener noreferrer" data-key="portfolio.foodmash.button">Ver Proyecto</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Growfit -->
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="600">
+            <div class="card h-100 shadow-sm border-0 project-card bg-light">
+              <img src="img/project-growfit.png" class="card-img-top" alt="Growfit">
+              <div class="card-body">
+                <h5 class="card-title font-weight-bold" data-key="portfolio.growfit.title">GROWFIT</h5>
+                <p class="card-text small text-secondary" data-key="portfolio.growfit.description">Landing page para servicio de fitness y bienestar. Diseño atractivo con llamadas a la acción efectivas.</p>
+                <div class="mt-3">
+                  <a href="https://growfit-landing.netlify.app/" class="btn btn-primary btn-sm rounded-pill px-3" target="_blank" rel="noopener noreferrer" data-key="portfolio.growfit.button">Ver Proyecto</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Playpen -->
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="700">
+            <div class="card h-100 shadow-sm border-0 project-card bg-light">
+              <img src="img/project-playpen.png" class="card-img-top" alt="Play pen">
+              <div class="card-body">
+                <h5 class="card-title font-weight-bold" data-key="portfolio.playpen.title">PLAYPEN</h5>
+                <p class="card-text small text-secondary" data-key="portfolio.playpen.description">Plataforma de entretenimiento y juegos. Experiencia inmersiva para usuarios de todas las edades.</p>
+                <div class="mt-3">
+                  <a href="https://pensionplaypen.com/" class="btn btn-primary btn-sm rounded-pill px-3" target="_blank" rel="noopener noreferrer" data-key="portfolio.playpen.button">Ver Proyecto</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Play N Trade -->
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="800">
+            <div class="card h-100 shadow-sm border-0 project-card bg-light">
+              <img src="img/project-playntrade.png" class="card-img-top" alt="Play N Trade">
+              <div class="card-body">
+                <h5 class="card-title font-weight-bold" data-key="portfolio.playntrade.title">PLAY N TRADE</h5>
+                <p class="card-text small text-secondary" data-key="portfolio.playntrade.description">Sitio web para compra y venta de videojuegos y consolas. Catálogo dinámico y pasarela de pagos.</p>
+                <div class="mt-3">
+                  <a href="https://pntpanama.com/" class="btn btn-primary btn-sm rounded-pill px-3" target="_blank" rel="noopener noreferrer" data-key="portfolio.playntrade.button">Ver Proyecto</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Experiencia -->
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience" data-aos="fade-up">
+      <div class="my-auto">
+        <h2 class="mb-5" data-key="experience.title" data-aos="fade-right">EXPERIENCE</h2>
 
         <div class="resume-item d-flex flex-column mt-4 flex-md-row mb-5">
           <div class="resume-content mr-auto">
@@ -224,7 +620,7 @@
                 Kelmia
               </a>
             </div>
-            <p>• <span data-key="experience.kelmia.text1">I work as a Front-end Developer using Angular.</span></p>
+            <p>• <span data-key="experience.kelmia.text1">I work as a Front-end Developer using Vue.</span></p>
           </div>
           <div class="resume-date text-md-right">
             <span class="text-primary">
@@ -452,9 +848,8 @@
       </div>
     </section>
 
-
     <!-- Educación -->
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education" data-aos="fade-up">
       <div class="my-auto">
         <h2 class="mb-5" data-key="education.title">EDUCATION</h2>
 
@@ -514,242 +909,6 @@
       </div>
     </section>
 
-    <!-- Habilidades -->
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
-      <div class="my-auto">
-        <h2 class="mb-5" data-key="skills.title">SKILLS</h2>
-
-        <div class="subheading mb-3" data-key="skills.subtitle">PROGRAMMING LANGUAGES AND TOOLS</div>
-
-        <!-- tecnologias -->
-        <div class="list-inline list-icons">
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Html5">
-            <i class="devicon-html5-plain-wordmark colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Css3">
-            <i class="devicon-css3-plain-wordmark colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Javascript">
-            <i class="devicon-javascript-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Typescript">
-            <i class="devicon-typescript-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Php">
-            <i class="devicon-php-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Node.js">
-            <i class="devicon-nodejs-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Jquery">
-            <i class="devicon-jquery-plain-wordmark colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Sass">
-            <i class="devicon-sass-original colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Less">
-            <i class="devicon-less-plain-wordmark colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Bootstrap">
-            <i class="devicon-bootstrap-plain-wordmark colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Bulma">
-            <i class="devicon-bulma-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Vuetify">
-            <i class="devicon-vuetify-line colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Npm">
-            <i class="devicon-npm-original-wordmark colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="React.js">
-            <i class="devicon-react-original colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="React Native">
-            <i class="devicon-reactnative-original colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Expo">
-            <i class="devicon-expo-original colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Angular.js">
-            <i class="devicon-angularjs-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Redux">
-            <i class="devicon-redux-original colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Vue.js">
-            <i class="devicon-vuejs-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Nuxt.js">
-            <i class="devicon-nuxtjs-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Material.ui">
-            <i class="devicon-materialui-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Apache">
-            <i class="devicon-apache-line-wordmark colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Babel">
-            <i class="devicon-babel-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Dart">
-            <i class="devicon-dart-plain-wordmark colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Express">
-            <i class="devicon-express-original colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Flutter">
-            <i class="devicon-flutter-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="iOS">
-            <i class="devicon-apple-original colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Android">
-            <i class="devicon-android-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Socket.io">
-            <i class="devicon-socketio-original colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Gradle">
-            <i class="devicon-gradle-plain-wordmark colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Kotlin">
-            <i class="devicon-kotlin-plain-wordmark colored"></i>
-          </li>
-
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Laravel">
-            <i class="devicon-laravel-plain-wordmark colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Markdown">
-            <i class="devicon-markdown-original colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Mongodb">
-            <i class="devicon-mongodb-plain-wordmark colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Mysql">
-            <i class="devicon-mysql-plain-wordmark colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Postgresql">
-            <i class="devicon-postgresql-plain-wordmark colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Next.js">
-            <i class="devicon-nextjs-original-wordmark colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Nginx">
-            <i class="devicon-nginx-original colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Webpack">
-            <i class="devicon-webpack-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Composer">
-            <i class="devicon-composer-line colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Vite">
-            <i class="devicon-vitejs-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="AWS">
-            <i class="devicon-amazonwebservices-plain-wordmark colored"></i>
-          </li>
-        </div>
-
-        <hr class="w-100 my-4" />
-
-        <!-- herramientas -->
-        <div class="list-inline list-icons">
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Git">
-            <i class="devicon-git-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Trello">
-            <i class="devicon-trello-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Jira">
-            <i class="devicon-jira-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Slack">
-            <i class="devicon-slack-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Gimp">
-            <i class="devicon-gimp-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Inkscape">
-            <i class="devicon-inkscape-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Illustrator">
-            <i class="devicon-illustrator-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Xd">
-            <i class="devicon-xd-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Photoshop">
-            <i class="devicon-photoshop-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Codepen">
-            <i class="devicon-codepen-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Vim">
-            <i class="devicon-vim-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Atom">
-            <i class="devicon-atom-original colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Vs code">
-            <i class="devicon-vscode-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Android studio">
-            <i class="devicon-androidstudio-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Xcode">
-            <i class="devicon-xcode-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Bash">
-            <i class="devicon-bash-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Ssh">
-            <i class="devicon-putty-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Docker">
-            <i class="devicon-docker-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Filezilla">
-            <i class="devicon-filezilla-plain colored"></i>
-          </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Unity">
-            <i class="devicon-unity-plain colored"></i>
-          </li>
-        </div>
-
-        <hr class="w-100 my-4" />
-
-        <div class="subheading mb-3" data-key="skills.softskills.title">SOFT SKILLS</div>
-        <ul class="fa-ul mb-0">
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            <span data-key="skills.softskills1">Teamwork</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            <span data-key="skills.softskills2">Agile development and Scrum</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            <span data-key="skills.softskills3">Good communication, responsibility and commitment</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            <span data-key="skills.softskills4">Creative thinking and positivity</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            <span data-key="skills.softskills5">Time management and adaptability</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            <span data-key="skills.softskills6">Perseverance and patience</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-
     <!-- Intereses -->
     <!-- <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
       <div class="my-auto">
@@ -763,74 +922,6 @@
       </div>
     </section> -->
 
-    <!-- Logros -->
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
-      <div class="my-auto">
-        <h2 class="mb-5" data-key="portfolio.title">PORTFOLIO</h2>
-        <ul class="fa-ul mb-0">
-          <li class="my-3">
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            <a href="https://www.nearbycrm.com/" target="_blank" rel="noopener noreferrer">
-              Nearbycrm
-            </a>
-          </li>
-          <li class="my-3">
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            <a href="https://iron-maiden-p-c-game.netlify.app/" target="_blank" rel="noopener noreferrer">
-              Iron Maiden (game)
-            </a>
-          </li>
-          <li class="my-3">
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            <a href="https://xiex.io/" target="_blank" rel="noopener noreferrer">
-              Xiex
-            </a>
-          </li>
-          <li class="my-3">
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            <a href="https://frontest.megashopty.com/" target="_blank" rel="noopener noreferrer">
-              Megashopty
-            </a>
-          </li>
-          <li class="my-3">
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            <a href="https://dashboard-food-mash.netlify.app/" target="_blank" rel="noopener noreferrer">
-              Food mash
-            </a>
-          </li>
-          <li class="my-3">
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            <a href="https://growfit-landing.netlify.app/" target="_blank" rel="noopener noreferrer">
-              Growfit
-            </a>
-          </li>
-          <li class="my-3">
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            <a href="https://cargadores.celsia.com/ingreso-cpo" target="_blank" rel="noopener noreferrer">
-              Celsia CPO
-            </a>
-          </li>
-          <li class="my-3">
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            <a href="https://pensionplaypen.com/" target="_blank" rel="noopener noreferrer">
-              Play pen
-            </a>
-          </li>
-          <li class="my-3">
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            <a href="https://zen.dondemand.io/es/" target="_blank" rel="noopener noreferrer">
-              Dondemand
-            </a>
-          </li>
-          <li class="my-3">
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            <a href="https://pntpanama.com/" target="_blank" rel="noopener noreferrer">
-              Play N Trade
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
   </div>
 
   <!-- Bootstrap core JavaScript -->
@@ -843,6 +934,19 @@
   <!-- Custom scripts for this template -->
   <!-- <script type="module" src="js/resume.js"></script> -->
   <script src="js/resume.min.js" defer></script>
+
+  <!-- AOS (Animate On Scroll) -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init({
+        duration: 400,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+      });
+    });
+  </script>
 </body>
 
 </html>

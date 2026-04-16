@@ -84,6 +84,7 @@
   "education.career3.university": "UDEMY",
 
   "skills.title": "SKILLS",
+  "skills.tools.title": "TOOLS",
   "skills.subtitle": "PROGRAMMING LANGUAGES AND TOOLS",
   "skills.softskills.title": "SOFT SKILLS",
   "skills.softskills1": "Teamwork",
@@ -93,6 +94,42 @@
   "skills.softskills5": "Time management and adaptability",
   "skills.softskills6": "Perseverance and patience",
 
-  "portfolio.title": "PORTFOLIO"
+  "portfolio.title": "PORTFOLIO",
+
+  "portfolio.mobile.title": "MOBILE DEVELOPMENT",
+  "portfolio.mobile.description": "Multi-platform apps published to stores for logistics and services (React Native / Flutter).",
+  "portfolio.mobile.button": "View Profile",
+
+  "portfolio.telegram.title": "Telegram Bot",
+  "portfolio.telegram.description": "Telegram bot designed to manage and organize contacts received from my portfolio. Allows capturing leads and administering them easily.",
+  "portfolio.telegram.button": "View Project",
+
+  "portfolio.nearby.title": "NEARBY CRM",
+  "portfolio.nearby.description": "Complete real estate solution with admin panel and lead management. Developed with Angular and Laravel.",
+  "portfolio.nearby.button": "View Project",
+
+  "portfolio.ironmaiden.title": "IRON MAIDEN (GAME)",
+  "portfolio.ironmaiden.description": "Thematic Iron Maiden web video game. Developed with modern technologies for a unique interactive experience.",
+  "portfolio.ironmaiden.button": "View Project",
+
+  "portfolio.megashopty.title": "MEGASHOPTY",
+  "portfolio.megashopty.description": "E-commerce frontend with product catalog and shopping cart. Optimized for conversions.",
+  "portfolio.megashopty.button": "View Project",
+
+  "portfolio.foodmash.title": "FOOD MASH",
+  "portfolio.foodmash.description": "Dashboard for order and menu management in restaurants. Data visualization and inventory control.",
+  "portfolio.foodmash.button": "View Project",
+
+  "portfolio.growfit.title": "GROWFIT",
+  "portfolio.growfit.description": "Landing page for fitness and wellness service. Attractive design with effective calls to action.",
+  "portfolio.growfit.button": "View Project",
+
+  "portfolio.playpen.title": "PLAYPEN",
+  "portfolio.playpen.description": "Entertainment and games platform. Immersive experience for users of all ages.",
+  "portfolio.playpen.button": "View Project",
+
+  "portfolio.playntrade.title": "PLAY N TRADE",
+  "portfolio.playntrade.description": "Website for buying and selling video games and consoles. Dynamic catalog and payment gateway.",
+  "portfolio.playntrade.button": "View Project"
 
 }

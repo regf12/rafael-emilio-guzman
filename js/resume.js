@@ -38,15 +38,22 @@ let locale = {
 /* ------------------------------------------------------------------------ */
 
 function getLang() {
-  let elementos = document.querySelectorAll('[data-key]');
-
-  actualizarTextos(locale[lang], elementos);
+  try {
+    let elementos = document.querySelectorAll('[data-key]');
+  
+    actualizarTextos(locale[lang], elementos);
+  } catch (error) {
+    // 
+  }
 }
 
 function actualizarTextos(json, elementos) {
+  if (!elementos) {
+    return;
+  }
 
   for (let elemento of elementos) {
-    if (json[elemento.dataset.key]) {
+    if (elemento?.dataset?.key && json[elemento.dataset.key]) {
       elemento.textContent = json[elemento.dataset.key];
     }
   }
