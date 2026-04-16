@@ -6,7 +6,7 @@
 ![GitHub Followers](https://img.shields.io/github/followers/regf12?style=social)
 ![GitHub Stars](https://img.shields.io/github/stars/regf12?style=social)
 
-Software developer with more than 6 years of experience in developing web and mobile applications. With experience in e-commerce, service management and other industries. Passionate about creating quality, wearable products.
+Software developer with more than 6 years of experience in developing web and mobile applications. With experience in e-commerce, service management and other industries. Passionate about creating quality, usable products.
 
 I am always looking for new opportunities to learn and grow; I love working on challenging projects. If you are looking for a talented and committed developer, do not hesitate to contact me.
 
@@ -15,6 +15,7 @@ I am always looking for new opportunities to learn and grow; I love working on c
 ## 🛠 Habilidades
 
 ### Lenguajes
+
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
@@ -24,6 +25,7 @@ I am always looking for new opportunities to learn and grow; I love working on c
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
 
 ### Frontend & Mobile
+
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)
 ![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
@@ -38,6 +40,7 @@ I am always looking for new opportunities to learn and grow; I love working on c
 ![Vuetify](https://img.shields.io/badge/Vuetify-1867C0?style=for-the-badge&logo=vuetify&logoColor=white)
 
 ### Backend & Database
+
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
 ![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
@@ -46,6 +49,7 @@ I am always looking for new opportunities to learn and grow; I love working on c
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 
 ### Tools & DevOps
+
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
@@ -55,12 +59,13 @@ I am always looking for new opportunities to learn and grow; I love working on c
 ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
 ### Soft Skills
-* Teamwork
-* Agile development and Scrum
-* Good communication, responsibility and commitment
-* Creative thinking and positivity
-* Time management and adaptability
-* Perseverance and patience
+
+- Teamwork
+- Agile development and Scrum
+- Good communication, responsibility and commitment
+- Creative thinking and positivity
+- Time management and adaptability
+- Perseverance and patience
 
 ---
 

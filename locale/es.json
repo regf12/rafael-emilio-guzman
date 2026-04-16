@@ -2,15 +2,15 @@
   "locale": "en",
   "title": "en",
 
-  "home.aboutme": "Acerca de mi",
+  "home.aboutme": "Acerca de mí",
   "home.experience": "Experiencia",
   "home.education": "Educación",
   "home.skills": "Habilidades",
-  "home.portfolio": "Portfolio",
+  "home.portfolio": "Portafolio",
   "home.downloadcv": "Descargar CV",
 
   "home.name": "Rafael Emilio",
-  "home.lastname": "Guzman",
+  "home.lastname": "Guzmán",
   "home.title": "Licenciado en Informática",
   "home.role": "Programador Full-stack",
   "home.text1": "Desarrollador de software con más de 6 años de experiencia en el desarrollo de aplicaciones web y móviles. Con experiencia en comercio electrónico, administración de servicios y otras industrias. Apasionado por la creación de productos usables y de calidad.",
@@ -18,28 +18,42 @@
 
   "experience.title": "EXPERIENCIA",
 
-  "experience.work1.text1": "Desarrollé sistemas desarrollados con react y node.",
-  "experience.work1.text2": "Desplegué y realice la puesta en producción en servidores aws, vercel y netlify.",
+  "experience.type.fulltime": "Jornada completa",
+  "experience.type.freelance": "Profesional independiente",
+
+  "experience.role.frontend": "Desarrollador front-end",
+  "experience.role.fullstack": "Programador full stack",
+
+  "experience.kelmia.text1": "Me desempeño como desarrollador front-end con Angular.",
+  "experience.nearbycrm.text1": "Desarrollé sistemas con Angular y Laravel.",
+
+  "experience.xiomex.text1": "Desarrollé sistemas con React y Node.js.",
+  "experience.acristo.text1": "Desarrollé sistemas con React y Node.js.",
+  "experience.pherchu.text1": "Desarrollé sistemas con React y Node.js.",
+  "experience.pherchu.text2": "Desplegué y realicé la puesta en producción en servidores AWS, Vercel y Netlify.",
+
+  "experience.work1.text1": "Desarrollé sistemas con Angular y Laravel.",
+  "experience.work1.text2": "Desplegué y realicé la puesta en producción en servidores AWS, Vercel y Netlify.",
 
   "experience.work2.text1": "Desarrollé software para aplicaciones web y móviles.",
-  "experience.work2.text2": "Utilicé tecnologías como javascript, react.js, react-native, socket.io.",
+  "experience.work2.text2": "Utilicé tecnologías como JavaScript, React.js, React-Native, Socket.io.",
 
-  "experience.work3.text1": "Desarrollé y di mantenimiento a aplicaciones web, de la empresa y sus clientes.",
-  "experience.work3.text2": "Utilicé tecnologías de programación como javascript, vue.js, react.js.",
+  "experience.work3.text1": "Desarrollé y brindé mantenimiento a aplicaciones web de la empresa y sus clientes.",
+  "experience.work3.text2": "Utilicé tecnologías como JavaScript, Vue.js, React.js.",
 
-  "experience.work4.text1": "Desarrollé aplicaciones web, de la empresa y sus clientes.",
-  "experience.work4.text2": "Utilicé tecnologías de programación como javascript, react.js, php, laravel.",
-  "experience.work4.text3": "Trabaje bajo metodología scrum.",
+  "experience.work4.text1": "Desarrollé aplicaciones web para la empresa y sus clientes.",
+  "experience.work4.text2": "Utilicé tecnologías como JavaScript, React.js, PHP, Laravel.",
+  "experience.work4.text3": "Trabajé bajo metodología Scrum.",
 
   "experience.work5.text1": "Maqueté una gran cantidad de sitios de comercio electrónico.",
   "experience.work5.text2": "Me encargué de desarrollar, dar soporte, administrar y desplegar a producción sitios de comercio electrónico.",
 
-  "experience.work6.text1": "Gestione los servidores y repositorios en los servidores de la empresa.",
-  "experience.work6.text2": "Di soporte y desarrollé módulos para el sistema comercial de la empresa.",
-  "experience.work6.text3": "Utilicé tecnologías de programación como javascript, php, laravel, socket.io.",
+  "experience.work6.text1": "Gestioné los servidores y repositorios de la empresa.",
+  "experience.work6.text2": "Brindé soporte y desarrollé módulos para el sistema comercial de la empresa.",
+  "experience.work6.text3": "Utilicé tecnologías como JavaScript, PHP, Laravel, Socket.io.",
   
   "experience.work7.text1": "Desarrollé y realicé mantenimiento a aplicaciones web.",
-  "experience.work7.text2": "Utilicé tecnologías de programación como javascript, vue.js.",
+  "experience.work7.text2": "Utilicé tecnologías como JavaScript y Vue.js.",
 
   "month.january": "Enero",
   "month.february": "Febrero",
@@ -53,6 +67,7 @@
   "month.october": "Octubre",
   "month.november": "Noviembre",
   "month.december": "Diciembre",
+  "month.present": "Actualidad",
 
   "education.title": "EDUCACIÓN",
   "education.certificate": "Certificado",
@@ -78,7 +93,6 @@
   "skills.softskills5": "Gestión del tiempo y adaptabilidad",
   "skills.softskills6": "Perseverancia y paciencia",
 
-  "portfolio.title": "PORTFOLIO",
+  "portfolio.title": "PORTAFOLIO"
 
-  "other.name": "Juan Pérez"
 }

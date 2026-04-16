@@ -36,23 +36,25 @@
   <meta name="whatsapp:image" content="https://regf12.github.io/rafael-emilio-guzman/img/favicon.ico" />
   <meta name="whatsapp:url" content="https://regf12.github.io/rafael-emilio-guzman/" />
 
-  <title>Portfolio - Rafael Emilio Guzman</title>
+  <title>Portfolio - Rafael Emilio Guzmán</title>
   <link rel="shortcut icon" href="img/favicon.ico" />
+
+  <!-- Preconnect to external domains -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
   <!-- Custom fonts for this template -->
-  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900"
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900&display=swap"
     rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap"
     rel="stylesheet" />
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 
   <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
-  <!-- <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet"> -->
-  <!-- <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet"> -->
 
   <!-- Custom styles for this template -->
   <link href="css/resume.min.css" rel="stylesheet" />
@@ -64,7 +66,7 @@
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
       <span class="d-block d-lg-none">Rafael Emilio Guzman</span>
       <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="" />
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.webp" alt="Rafael Emilio Guzmán" loading="lazy" />
       </span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -122,7 +124,7 @@
           <span data-key="home.text1">Software developer with more than 6 years of experience in
             developing web and mobile applications. With experience in
             e-commerce, service management and other industries. Passionate
-            about creating quality, wearable products.</span>
+            about creating quality, usable products.</span>
           <br />
           <br />
           <span data-key="home.text2">I am always looking for new opportunities to learn and grow; I
@@ -216,17 +218,49 @@
 
         <div class="resume-item d-flex flex-column mt-4 flex-md-row mb-5">
           <div class="resume-content mr-auto">
-            <h3 class="mb-0">Full stack developer</h3>
+            <h3 class="mb-0" data-key="experience.role.frontend">Front end developer</h3>
             <div class="subheading mb-3">
-              <a href="https://www.nearbycrm.com/" target="_blank" rel="noopener noreferrer"
-                class="subheading">
-                Nearbycrm
+              <a href="https://www.kelmia.com/" target="_blank" rel="noopener noreferrer" class="subheading">
+                Kelmia
               </a>
             </div>
-            <p>
-              •
-              <span data-key="experience.work1.text1">I developed systems with angular and laravel.</span>
-            </p>
+            <p>• <span data-key="experience.kelmia.text1">I work as a Front-end Developer using Angular.</span></p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">
+              <span data-key="month.july">July</span> 2025 -
+              <span data-key="month.present">Present</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column mt-4 flex-md-row mb-5">
+          <div class="resume-content mr-auto">
+            <h3 class="mb-0" data-key="experience.role.fullstack">Full stack developer</h3>
+            <div class="subheading mb-3">
+              <a href="https://www.nearbycrm.com/" target="_blank" rel="noopener noreferrer" class="subheading">
+                NEARBY CRM | RealEstate Software
+              </a>
+            </div>
+            <p>• <span data-key="experience.nearbycrm.text1">I developed systems using Angular and Laravel.</span></p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">
+              <span data-key="month.april">April</span> 2024 -
+              <span data-key="month.june">June</span> 2025
+            </span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column mt-4 flex-md-row mb-5">
+          <div class="resume-content mr-auto">
+            <h3 class="mb-0" data-key="experience.role.fullstack">Full stack developer</h3>
+            <div class="subheading mb-3">
+              <a href="https://xiomex.com/" target="_blank" rel="noopener noreferrer" class="subheading">
+                Xiomex
+              </a>
+            </div>
+            <p>• <span data-key="experience.xiomex.text1">I developed systems using React and Node.js.</span></p>
           </div>
           <div class="resume-date text-md-right">
             <span class="text-primary">Freelance</span>
@@ -235,30 +269,45 @@
 
         <div class="resume-item d-flex flex-column mt-4 flex-md-row mb-5">
           <div class="resume-content mr-auto">
-            <h3 class="mb-0">Full stack developer</h3>
+            <h3 class="mb-0" data-key="experience.role.fullstack">Full stack developer</h3>
             <div class="subheading mb-3">
-              <a href="https://www.instagram.com/phercuservices/" target="_blank" rel="noopener noreferrer"
-                class="subheading">
-                Pherchu
+              <a href="https://acristo.com/" target="_blank" rel="noopener noreferrer" class="subheading">
+                Acristo Engine
+              </a>
+            </div>
+            <p>• <span data-key="experience.acristo.text1">I developed systems using React and Node.js.</span></p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">Freelance</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column mt-4 flex-md-row mb-5">
+          <div class="resume-content mr-auto">
+            <h3 class="mb-0" data-key="experience.role.fullstack">Full stack developer</h3>
+            <div class="subheading mb-3">
+              <a href="https://www.instagram.com/phercuservices/" target="_blank" rel="noopener noreferrer" class="subheading">
+                Phercu
               </a>
             </div>
             <p>
-              •
-              <span data-key="experience.work1.text1">I developed systems with react and node.</span>
+              • <span data-key="experience.pherchu.text1">I developed systems using React and Node.js.</span>
               <br />
-              •
-              <span data-key="experience.work1.text2">Deployed and put into production on AWS, Vercel and Netlify
-                servers.</span>
+              • <span data-key="experience.pherchu.text2">Deployed and put into production on AWS, Vercel and Netlify servers.</span>
             </p>
           </div>
           <div class="resume-date text-md-right">
-            <span class="text-primary">Freelance</span>
+            <span class="text-primary">
+              <span data-key="month.june">June</span> 2023 -
+              <span data-key="month.january">January</span> 2024
+            </span>
           </div>
         </div>
 
+
         <div class="resume-item d-flex flex-column mt-4 flex-md-row mb-5">
           <div class="resume-content mr-auto">
-            <h3 class="mb-0">Front end y Mobile developer</h3>
+            <h3 class="mb-0">Front end and Mobile developer</h3>
             <div class="subheading mb-3">
               <a href="https://www.deepseadev.com/en/" target="_blank" rel="noopener noreferrer" class="subheading">
                 Deep Sea Developments
@@ -403,6 +452,7 @@
       </div>
     </section>
 
+
     <!-- Educación -->
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
       <div class="my-auto">
@@ -515,6 +565,12 @@
           <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="React.js">
             <i class="devicon-react-original colored"></i>
           </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="React Native">
+            <i class="devicon-reactnative-original colored"></i>
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Expo">
+            <i class="devicon-expo-original colored"></i>
+          </li>
           <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Angular.js">
             <i class="devicon-angularjs-plain colored"></i>
           </li>
@@ -545,12 +601,22 @@
           <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Flutter">
             <i class="devicon-flutter-plain colored"></i>
           </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="iOS">
+            <i class="devicon-apple-original colored"></i>
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Android">
+            <i class="devicon-android-plain colored"></i>
+          </li>
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Socket.io">
+            <i class="devicon-socketio-original colored"></i>
+          </li>
           <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Gradle">
             <i class="devicon-gradle-plain-wordmark colored"></i>
           </li>
           <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Kotlin">
             <i class="devicon-kotlin-plain-wordmark colored"></i>
           </li>
+
           <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" title="Laravel">
             <i class="devicon-laravel-plain-wordmark colored"></i>
           </li>
@@ -768,15 +834,15 @@
   </div>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/jquery/jquery.min.js" defer></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
 
   <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/jquery-easing/jquery.easing.min.js" defer></script>
 
   <!-- Custom scripts for this template -->
   <!-- <script type="module" src="js/resume.js"></script> -->
-  <script src="js/resume.min.js"></script>
+  <script src="js/resume.min.js" defer></script>
 </body>
 
 </html>
