@@ -39,13 +39,23 @@
   <title>Portfolio - Rafael Emilio Guzmán</title>
   <link rel="shortcut icon" href="img/favicon.ico" />
 
+  <!-- DNS Prefetch for faster DNS resolution -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://unpkg.com">
+
   <!-- Preconnect to external domains -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap core CSS - Non-critical, deferred loading -->
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  </noscript>
 
   <!-- Custom fonts for this template -->
   <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
@@ -134,6 +144,9 @@
       }
     }
   </style>
+  <script>
+    !function(){var t=document.createElement('link');t.rel='preload',t.as='style',t.href='vendor/bootstrap/css/bootstrap.min.css',t.onload=function(){this.rel='stylesheet'},document.head.appendChild(t)}();
+  </script>
 </head>
 
 <body id="page-top">
@@ -144,7 +157,7 @@
     <a class="navbar-brand js-scroll-trigger" href="#page-top" aria-label="Back to top">
       <span class="d-block d-lg-none">Rafael Emilio Guzman</span>
       <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.webp" alt="Rafael Emilio Guzmán" loading="lazy" width="200" height="200" />
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.webp" alt="Rafael Emilio Guzmán" width="200" height="200" fetchpriority="high" />
       </span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
