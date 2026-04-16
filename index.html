@@ -85,7 +85,7 @@
       position: absolute;
       top: -100px;
       left: 0;
-      background: #bd5d38;
+      background: #0c4889;
       color: #fff;
       padding: 1rem;
       z-index: 9999;
@@ -99,22 +99,44 @@
       outline-offset: 2px;
     }
     a:focus {
-      outline: 3px solid #bd5d38;
+      outline: 3px solid #0c4889;
       outline-offset: 2px;
     }
     .skill-icon {
-      height: 3.5rem;
-      width: auto;
-      margin: 10px;
+      width: 100%;
+      height: auto;
+      margin: 10px 0;
       transition: transform 0.3s ease;
       filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
     }
     .skill-icon:hover {
       transform: translateY(-5px) scale(1.1);
     }
+    .skill-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0.25rem;
+    }
+    .skill-name {
+      font-size: 0.65rem;
+      color: #868e96;
+      margin-top: 2px;
+      font-weight: 500;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-align: center;
+      width: 100%;
+    }
     @media (max-width: 576px) {
       .skill-icon {
         height: 2.5rem;
+      }
+      .skill-name {
+        font-size: 0.6rem;
       }
     }
     .project-card {
@@ -319,132 +341,174 @@
 
         <!-- tecnologias -->
         <ul class="list-inline list-icons" role="list" aria-label="Programming languages and tools">
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" class="skill-icon" alt="HTML5 logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">HTML5</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in" data-aos-delay="50">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in" data-aos-delay="50">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" class="skill-icon" alt="CSS3 logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">CSS3</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in" data-aos-delay="100">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in" data-aos-delay="100">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" class="skill-icon" alt="JavaScript logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">JavaScript</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in" data-aos-delay="150">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in" data-aos-delay="150">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" class="skill-icon" alt="TypeScript logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">TypeScript</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in" data-aos-delay="200">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in" data-aos-delay="200">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" class="skill-icon" alt="PHP logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">PHP</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in" data-aos-delay="250">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in" data-aos-delay="250">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" class="skill-icon" alt="Node.js logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Node.js</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg" class="skill-icon" alt="jQuery logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">jQuery</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" class="skill-icon" alt="Sass logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Sass</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/less/less-plain-wordmark.svg" class="skill-icon" alt="Less logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Less</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" class="skill-icon" alt="Bootstrap logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Bootstrap</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bulma/bulma-plain.svg" class="skill-icon" alt="Bulma logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Bulma</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuetify/vuetify-original.svg" class="skill-icon" alt="Vuetify logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Vuetify</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg" class="skill-icon" alt="NPM logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">NPM</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" class="skill-icon" alt="React.js logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">React.js</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" class="skill-icon" alt="React Native logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">React Native</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/expo/expo-original.svg" class="skill-icon" alt="Expo logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Expo</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg" class="skill-icon" alt="Angular.js logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Angular.js</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg" class="skill-icon" alt="Redux logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Redux</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" class="skill-icon" alt="Vue.js logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Vue.js</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nuxtjs/nuxtjs-original.svg" class="skill-icon" alt="Nuxt.js logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Nuxt.js</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg" class="skill-icon" alt="Material UI logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Material UI</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apache/apache-original.svg" class="skill-icon" alt="Apache logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Apache</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/babel/babel-original.svg" class="skill-icon" alt="Babel logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Babel</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" class="skill-icon" alt="Dart logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Dart</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" class="skill-icon" alt="Express logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Express</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" class="skill-icon" alt="Flutter logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Flutter</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apple/apple-original.svg" class="skill-icon" alt="iOS logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">iOS</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" class="skill-icon" alt="Android logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Android</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/socketio/socketio-original.svg" class="skill-icon" alt="Socket.io logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Socket.io</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original.svg" class="skill-icon" alt="Gradle logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Gradle</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg" class="skill-icon" alt="Kotlin logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Kotlin</span>
           </li>
 
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" class="skill-icon" alt="Laravel logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Laravel</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/markdown/markdown-original.svg" class="skill-icon" alt="Markdown logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Markdown</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" class="skill-icon" alt="MongoDB logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">MongoDB</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" class="skill-icon" alt="MySQL logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">MySQL</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" class="skill-icon" alt="PostgreSQL logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">PostgreSQL</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" class="skill-icon" alt="Next.js logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Next.js</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg" class="skill-icon" alt="Nginx logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Nginx</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/webpack/webpack-original.svg" class="skill-icon" alt="Webpack logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Webpack</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/composer/composer-original.svg" class="skill-icon" alt="Composer logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Composer</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vite/vite-original.svg" class="skill-icon" alt="Vite logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Vite</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" class="skill-icon" alt="AWS logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">AWS</span>
           </li>
         </ul>
 
@@ -453,65 +517,85 @@
         <!-- herramientas -->
         <div class="subheading mb-3" data-key="skills.tools.title">TOOLS</div>
         <ul class="list-inline list-icons" role="list" aria-label="Development tools">
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" class="skill-icon" alt="Git logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Git</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-plain.svg" class="skill-icon" alt="Trello logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Trello</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" class="skill-icon" alt="Jira logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Jira</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/slack/slack-original.svg" class="skill-icon" alt="Slack logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Slack</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gimp/gimp-original.svg" class="skill-icon" alt="Gimp logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Gimp</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/inkscape/inkscape-original.svg" class="skill-icon" alt="Inkscape logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Inkscape</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-plain.svg" class="skill-icon" alt="Illustrator logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Illustrator</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/xd/xd-plain.svg" class="skill-icon" alt="Adobe XD logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Adobe XD</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-plain.svg" class="skill-icon" alt="Photoshop logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Photoshop</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/codepen/codepen-original.svg" class="skill-icon" alt="CodePen logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">CodePen</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vim/vim-original.svg" class="skill-icon" alt="Vim logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Vim</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/atom/atom-original.svg" class="skill-icon" alt="Atom logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Atom</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" class="skill-icon" alt="VS Code logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">VS Code</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" class="skill-icon" alt="Android Studio logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Android Studio</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/xcode/xcode-original.svg" class="skill-icon" alt="Xcode logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Xcode</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" class="skill-icon" alt="Bash logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Bash</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/putty/putty-original.svg" class="skill-icon" alt="PuTTY (SSH) logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">PuTTY</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" class="skill-icon" alt="Docker logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Docker</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/filezilla/filezilla-original.svg" class="skill-icon" alt="FileZilla logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">FileZilla</span>
           </li>
-          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item" data-aos="zoom-in">
+          <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg" class="skill-icon" alt="Unity logo" loading="lazy" width="56" height="56" />
+            <div class="skill-name">Unity</div>
           </li>
         </ul>
 
@@ -556,9 +640,11 @@
           <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="300" role="listitem">
             <article class="card h-100 shadow-sm border-0 project-card bg-light">
               <img src="img/project-mobile.png" class="card-img-top" alt="Screenshot of mobile application" loading="lazy" width="300" height="200">
-              <div class="card-body">
-                <h3 class="card-title font-weight-bold h5" data-key="portfolio.mobile.title">MOBILE DEVELOPMENT</h3>
+              <div class="card-body d-flex flex flex-column justify-content-between">
+                <div class="">
+                  <h3 class="card-title font-weight-bold h5" data-key="portfolio.mobile.title">MOBILE DEVELOPMENT</h3>
                 <p class="card-text small text-secondary" data-key="portfolio.mobile.description">Cross-platform apps published on stores for logistics and services (React Native / Flutter).</p>
+                </div>
                 <div class="mt-3">
                   <a href="https://play.google.com/store/apps/developer?id=Regf12" class="btn btn-primary btn-sm rounded-pill px-3" target="_blank" rel="noopener noreferrer" aria-label="View developer profile on Google Play">View Profile</a>
                 </div>
@@ -569,9 +655,11 @@
           <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="100" role="listitem">
             <article class="card h-100 shadow-sm border-0 project-card bg-light">
               <img src="img/project-bot.png" class="card-img-top" alt="Telegram Bot logo" loading="lazy" width="300" height="200">
-              <div class="card-body">
-                <h3 class="card-title font-weight-bold h5" data-key="portfolio.telegram.title">Telegram Bot</h3>
+              <div class="card-body d-flex flex flex-column justify-content-between">
+                <div class="">
+                  <h3 class="card-title font-weight-bold h5" data-key="portfolio.telegram.title">Telegram Bot</h3>
                 <p class="card-text small text-secondary" data-key="portfolio.telegram.description">Telegram bot designed to manage and organize contacts received from my portfolio. Allows capturing and administering leads easily.</p>
+                </div>
                 <div class="mt-3">
                   <a href="https://t.me/RegfBot" class="btn btn-primary btn-sm rounded-pill px-3" target="_blank" rel="noopener noreferrer" aria-label="View Telegram Bot project">View Project</a>
                 </div>
@@ -582,9 +670,11 @@
           <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="400" role="listitem">
             <article class="card h-100 shadow-sm border-0 project-card bg-light">
               <img src="img/project-game.png" class="card-img-top" alt="Screenshot of Iron Maiden video game" loading="lazy" width="300" height="200">
-              <div class="card-body">
-                <h3 class="card-title font-weight-bold h5" data-key="portfolio.ironmaiden.title">IRON MAIDEN (GAME)</h3>
+              <div class="card-body d-flex flex flex-column justify-content-between">
+                <div class="">
+                  <h3 class="card-title font-weight-bold h5" data-key="portfolio.ironmaiden.title">IRON MAIDEN (GAME)</h3>
                 <p class="card-text small text-secondary" data-key="portfolio.ironmaiden.description">Thematic Iron Maiden web video game. Developed with modern technologies for a unique interactive experience.</p>
+                </div>
                 <div class="mt-3">
                   <a href="https://iron-maiden-p-c-game.netlify.app/" class="btn btn-primary btn-sm rounded-pill px-3" target="_blank" rel="noopener noreferrer" aria-label="View Iron Maiden Game project (opens in new tab)">View Project</a>
                 </div>
@@ -595,9 +685,11 @@
           <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="500" role="listitem">
             <article class="card h-100 shadow-sm border-0 project-card bg-light">
               <img src="img/project-megashopty.png" class="card-img-top" alt="Screenshot of Megashopty" loading="lazy" width="300" height="200">
-              <div class="card-body">
-                <h3 class="card-title font-weight-bold h5" data-key="portfolio.megashopty.title">MEGASHOPTY</h3>
+              <div class="card-body d-flex flex flex-column justify-content-between">
+                <div class="">
+                  <h3 class="card-title font-weight-bold h5" data-key="portfolio.megashopty.title">MEGASHOPTY</h3>
                 <p class="card-text small text-secondary" data-key="portfolio.megashopty.description">Frontend for e-commerce with product catalog and shopping cart. Optimized for conversions.</p>
+                </div>
                 <div class="mt-3">
                   <a href="https://frontest.megashopty.com/" class="btn btn-primary btn-sm rounded-pill px-3" target="_blank" rel="noopener noreferrer" aria-label="View Megashopty project (opens in new tab)">View Project</a>
                 </div>
@@ -608,9 +700,11 @@
           <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="550" role="listitem">
             <article class="card h-100 shadow-sm border-0 project-card bg-light">
               <img src="img/project-foodmash.png" class="card-img-top" alt="Screenshot of Food Mash dashboard" loading="lazy" width="300" height="200">
-              <div class="card-body">
-                <h3 class="card-title font-weight-bold h5" data-key="portfolio.foodmash.title">FOOD MASH</h3>
+              <div class="card-body d-flex flex flex-column justify-content-between">
+                <div class="">
+                  <h3 class="card-title font-weight-bold h5" data-key="portfolio.foodmash.title">FOOD MASH</h3>
                 <p class="card-text small text-secondary" data-key="portfolio.foodmash.description">Dashboard for managing orders and menus in restaurants. Data visualization and inventory control.</p>
+                </div>
                 <div class="mt-3">
                   <a href="https://dashboard-food-mash.netlify.app/" class="btn btn-primary btn-sm rounded-pill px-3" target="_blank" rel="noopener noreferrer" aria-label="View Food Mash project (opens in new tab)">View Project</a>
                 </div>
@@ -621,9 +715,11 @@
           <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="600" role="listitem">
             <article class="card h-100 shadow-sm border-0 project-card bg-light">
               <img src="img/project-growfit.png" class="card-img-top" alt="Screenshot of Growfit landing page" loading="lazy" width="300" height="200">
-              <div class="card-body">
-                <h3 class="card-title font-weight-bold h5" data-key="portfolio.growfit.title">GROWFIT</h3>
+              <div class="card-body d-flex flex flex-column justify-content-between">
+                <div class="">
+                  <h3 class="card-title font-weight-bold h5" data-key="portfolio.growfit.title">GROWFIT</h3>
                 <p class="card-text small text-secondary" data-key="portfolio.growfit.description">Landing page for fitness and wellness service. Attractive design with effective calls to action.</p>
+                </div>
                 <div class="mt-3">
                   <a href="https://growfit-landing.netlify.app/" class="btn btn-primary btn-sm rounded-pill px-3" target="_blank" rel="noopener noreferrer" aria-label="View Growfit project (opens in new tab)">View Project</a>
                 </div>
@@ -634,9 +730,11 @@
           <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="700" role="listitem">
             <article class="card h-100 shadow-sm border-0 project-card bg-light">
               <img src="img/project-playpen.png" class="card-img-top" alt="Screenshot of PlayPen" loading="lazy" width="300" height="200">
-              <div class="card-body">
-                <h3 class="card-title font-weight-bold h5" data-key="portfolio.playpen.title">PLAYPEN</h3>
+              <div class="card-body d-flex flex flex-column justify-content-between">
+                <div class="">
+                  <h3 class="card-title font-weight-bold h5" data-key="portfolio.playpen.title">PLAYPEN</h3>
                 <p class="card-text small text-secondary" data-key="portfolio.playpen.description">Entertainment and games platform. Immersive experience for users of all ages.</p>
+                </div>
                 <div class="mt-3">
                   <a href="https://pensionplaypen.com/" class="btn btn-primary btn-sm rounded-pill px-3" target="_blank" rel="noopener noreferrer" aria-label="View PlayPen project (opens in new tab)">View Project</a>
                 </div>
@@ -647,9 +745,11 @@
           <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="800" role="listitem">
             <article class="card h-100 shadow-sm border-0 project-card bg-light">
               <img src="img/project-playntrade.png" class="card-img-top" alt="Screenshot of Play N Trade" loading="lazy" width="300" height="200">
-              <div class="card-body">
-                <h3 class="card-title font-weight-bold h5" data-key="portfolio.playntrade.title">PLAY N TRADE</h3>
+              <div class="card-body d-flex flex flex-column justify-content-between">
+                <div class="">
+                  <h3 class="card-title font-weight-bold h5" data-key="portfolio.playntrade.title">PLAY N TRADE</h3>
                 <p class="card-text small text-secondary" data-key="portfolio.playntrade.description">Website for buying and selling video games and consoles. Dynamic catalog and payment gateway.</p>
+                </div>
                 <div class="mt-3">
                   <a href="https://pntpanama.com/" class="btn btn-primary btn-sm rounded-pill px-3" target="_blank" rel="noopener noreferrer" aria-label="View Play N Trade project (opens in new tab)">View Project</a>
                 </div>
