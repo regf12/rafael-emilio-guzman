@@ -59,10 +59,19 @@ h2 {
 
 .list-icons {
   font-size: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-icons .list-inline-item {
+  flex: 0 0 auto;
 }
 
 .list-icons .list-inline-item i:hover {
-  color: #374d81;
+  color: #0c4889;
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {

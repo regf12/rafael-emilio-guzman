@@ -68,22 +68,21 @@ $(document).ready(function () {
       lang = 'en';
     }
   } catch (error) {
-    console.log('error: ', error)
+    lang = 'en';
   }
 
   let docName = `Rafael Guzman Developer (${lang || 'en'}).pdf`;
   $('#link-cv').attr('href', `docs/${docName}`);
   $('#link-cv').attr('download', docName);
 
-  if (lang && lang === 'es') {
-    fetch(`${window.location.href || '../'}locale/${lang || 'en'}.json`)
-      .then(response => response.json())
-      .then(data => {
-        locale[lang] = data;
-
-        getLang();
-      });
-  } else {
-    getLang();
-  }
+  fetch(`locale/${lang}.json`)
+    .then(response => response.json())
+    .then(data => {
+      locale[lang] = data;
+      getLang();
+    })
+    .catch(error => {
+      console.log('Locale not loaded:', error);
+      getLang();
+    });
 });

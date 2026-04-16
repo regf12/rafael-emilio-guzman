@@ -51,46 +51,30 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="preconnect" href="https://unpkg.com" crossorigin>
 
-  <!-- Bootstrap core CSS - Non-critical, deferred loading -->
-  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" media="print" onload="this.media='all'" />
-  <noscript>
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-  </noscript>
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
 
   <!-- Custom fonts for this template -->
-  <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-  <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  </noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
 
-  <!-- Custom fonts and styles - Non-critical deferred loading -->
-  <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css" media="print" onload="this.media='all'">
-  <noscript>
-    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
-  </noscript>
+  <!-- Custom fonts and styles -->
+  <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css" />
 
   <!-- AOS (Animate On Scroll) -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" media="print" onload="this.media='all'" />
-  <noscript>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-  </noscript>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <!-- Custom styles for this template -->
-  <link rel="stylesheet" href="css/resume.min.css" media="print" onload="this.media='all'" />
-  <noscript>
-    <link rel="stylesheet" href="css/resume.min.css">
-  </noscript>
+  <link rel="stylesheet" href="css/resume.min.css" />
 
   <style>
-    body{opacity:0;transition:opacity .2s}body Loaded{opacity:1}
+    body{visibility:visible}
     .skip-link{position:absolute;top:-100px;left:0;background:#0c4889;color:#fff;padding:1rem;z-index:9999;text-decoration:none;font-weight:600;transition:top .3s}
     .skip-link:focus{top:0;outline:3px solid #fff;outline-offset:2px}
     a:focus{outline:3px solid #0c4889;outline-offset:2px}
     .skill-icon{width:100%;height:auto;margin:10px 0;transition:transform .3s;filter:drop-shadow(0 2px 4px rgba(0,0,0,.1))}
     .skill-icon:hover{transform:translateY(-5px) scale(1.1)}
-    .skill-item{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:.25rem}
+    .skill-item{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:.25rem;flex:0 0 auto}
+    .list-icons{display:flex;flex-wrap:wrap;list-style:none;padding:0;margin:0}
     .skill-name{font-size:.65rem;color:#868e96;margin-top:2px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;width:100%}
     @media(max-width:576px){.skill-icon{height:2.5rem}.skill-name{font-size:.6rem}}
     .project-card{transition:all .3s;cursor:normal}
@@ -1019,7 +1003,18 @@
   <script src="js/resume.min.js" defer></script>
 
   <!-- AOS (Animate On Scroll) -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js" defer onload="typeof AOS!='undefined'&&AOS.init({duration:400,easing:'ease-in-out',once:true,mirror:false,disable:window.matchMedia('(prefers-reduced-motion: reduce)').matches})"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init({
+        duration: 400,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false,
+        disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      });
+    });
+  </script>
 </body>
 
 </html>
