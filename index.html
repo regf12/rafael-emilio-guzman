@@ -58,11 +58,11 @@
   </noscript>
 
   <!-- Custom fonts for this template -->
-  <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
   <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   </noscript>
 
   <!-- Custom fonts and styles - Non-critical deferred loading -->
@@ -78,97 +78,26 @@
   </noscript>
 
   <!-- Custom styles for this template -->
-  <link href="css/resume.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/resume.min.css" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="css/resume.min.css">
+  </noscript>
 
   <style>
-    .skip-link {
-      position: absolute;
-      top: -100px;
-      left: 0;
-      background: #0c4889;
-      color: #fff;
-      padding: 1rem;
-      z-index: 9999;
-      text-decoration: none;
-      font-weight: 600;
-      transition: top 0.3s ease;
-    }
-    .skip-link:focus {
-      top: 0;
-      outline: 3px solid #fff;
-      outline-offset: 2px;
-    }
-    a:focus {
-      outline: 3px solid #0c4889;
-      outline-offset: 2px;
-    }
-    .skill-icon {
-      width: 100%;
-      height: auto;
-      margin: 10px 0;
-      transition: transform 0.3s ease;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-    }
-    .skill-icon:hover {
-      transform: translateY(-5px) scale(1.1);
-    }
-    .skill-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 0.25rem;
-    }
-    .skill-name {
-      font-size: 0.65rem;
-      color: #868e96;
-      margin-top: 2px;
-      font-weight: 500;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      text-align: center;
-      width: 100%;
-    }
-    @media (max-width: 576px) {
-      .skill-icon {
-        height: 2.5rem;
-      }
-      .skill-name {
-        font-size: 0.6rem;
-      }
-    }
-    .project-card {
-      transition: all 0.3s ease;
-      cursor: normal;
-    }
-    .project-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
-    }
-    .project-card .card-img-top {
-      height: 200px;
-      object-fit: cover;
-      background-color: #eaecf0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-      }
-    }
+    body{opacity:0;transition:opacity .2s}body Loaded{opacity:1}
+    .skip-link{position:absolute;top:-100px;left:0;background:#0c4889;color:#fff;padding:1rem;z-index:9999;text-decoration:none;font-weight:600;transition:top .3s}
+    .skip-link:focus{top:0;outline:3px solid #fff;outline-offset:2px}
+    a:focus{outline:3px solid #0c4889;outline-offset:2px}
+    .skill-icon{width:100%;height:auto;margin:10px 0;transition:transform .3s;filter:drop-shadow(0 2px 4px rgba(0,0,0,.1))}
+    .skill-icon:hover{transform:translateY(-5px) scale(1.1)}
+    .skill-item{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:.25rem}
+    .skill-name{font-size:.65rem;color:#868e96;margin-top:2px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;width:100%}
+    @media(max-width:576px){.skill-icon{height:2.5rem}.skill-name{font-size:.6rem}}
+    .project-card{transition:all .3s;cursor:normal}
+    .project-card:hover{transform:translateY(-10px);box-shadow:0 1rem 3rem rgba(0,0,0,.175)!important}
+    .project-card .card-img-top{height:200px;object-fit:cover;background-color:#eaecf0;display:flex;align-items:center;justify-content:center}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
   </style>
-  <script>
-    !function(){var t=document.createElement('link');t.rel='preload',t.as='style',t.href='vendor/bootstrap/css/bootstrap.min.css',t.onload=function(){this.rel='stylesheet'},document.head.appendChild(t)}();
-  </script>
 </head>
 
 <body id="page-top">
@@ -1090,18 +1019,7 @@
   <script src="js/resume.min.js" defer></script>
 
   <!-- AOS (Animate On Scroll) -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      AOS.init({
-        duration: 400,
-        easing: 'ease-in-out',
-        once: true,
-        mirror: false,
-        disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches
-      });
-    });
-  </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js" defer onload="typeof AOS!='undefined'&&AOS.init({duration:400,easing:'ease-in-out',once:true,mirror:false,disable:window.matchMedia('(prefers-reduced-motion: reduce)').matches})"></script>
 </body>
 
 </html>
